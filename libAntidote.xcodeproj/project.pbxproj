@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F064C5B719F9BD9500BCF873 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5B619F9BD9500BCF873 /* main.cpp */; };
+		F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */; };
+		F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C119F9BDB400BCF873 /* Antidote.cpp */; };
+		F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C519F9BDB400BCF873 /* Question.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		F064C5B319F9BD9500BCF873 /* libAntidote */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libAntidote; sourceTree = BUILT_PRODUCTS_DIR; };
 		F064C5B619F9BD9500BCF873 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Acetylcysteine.cpp; sourceTree = "<group>"; };
+		F064C5BE19F9BDB400BCF873 /* Acetylcysteine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acetylcysteine.h; sourceTree = "<group>"; };
+		F064C5C119F9BDB400BCF873 /* Antidote.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Antidote.cpp; sourceTree = "<group>"; };
+		F064C5C219F9BDB400BCF873 /* Antidote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Antidote.h; sourceTree = "<group>"; };
+		F064C5C419F9BDB400BCF873 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
+		F064C5C519F9BDB400BCF873 /* Question.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Question.cpp; sourceTree = "<group>"; };
+		F064C5C619F9BDB400BCF873 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,13 @@
 		F064C5B519F9BD9500BCF873 /* libAntidote */ = {
 			isa = PBXGroup;
 			children = (
+				F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */,
+				F064C5BE19F9BDB400BCF873 /* Acetylcysteine.h */,
+				F064C5C119F9BDB400BCF873 /* Antidote.cpp */,
+				F064C5C219F9BDB400BCF873 /* Antidote.h */,
+				F064C5C419F9BDB400BCF873 /* dictionary.txt */,
+				F064C5C519F9BDB400BCF873 /* Question.cpp */,
+				F064C5C619F9BDB400BCF873 /* Question.h */,
 				F064C5B619F9BD9500BCF873 /* main.cpp */,
 			);
 			path = libAntidote;
@@ -118,6 +135,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */,
+				F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */,
+				F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */,
 				F064C5B719F9BD9500BCF873 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
