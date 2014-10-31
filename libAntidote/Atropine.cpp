@@ -91,6 +91,7 @@ Atropine::~Atropine() {
 Question* Atropine::getNextQuestion(){
     int n1 = prompts["stringVialAutoInject?"]->getAnswerInt();
     if (n1 == 0){
+        moreQuestions = false;
         //neonates and infant dosing
         if (age < 1){
             return prompts["stringInfant"];
@@ -103,6 +104,7 @@ Question* Atropine::getNextQuestion(){
             }
         }
     } else if (n1 == 1){
+        moreQuestions = false;
         if(weightkg < 7) {
             return prompts["stringDoNotUseAutoInjector"];
         } else if(weightkg >=7 && weightkg < 18) {

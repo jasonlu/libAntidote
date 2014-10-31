@@ -260,20 +260,4 @@ double Acetylcysteine::treatmentThreshold() {
 	return (150) * (pow((M_E), ((-1) * (0.1732868) * (sampleHoursAfterExposure - 4))));
 }
 
-bool Acetylcysteine::hasMoreQuestions()  {
-	return this->moreQuestions;
-}
-
-    
-/**
- * TODO: delete this. not needed.
- *
- */
-bool Acetylcysteine::submit(Question *q) {
-
-	this->moreQuestions = false;
-	return false;
-}
-
-
 }

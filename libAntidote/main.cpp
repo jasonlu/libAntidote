@@ -34,13 +34,12 @@ void showDialog(Question *q) {
     for(int i = 0; i < q->options.size(); i++) {
         cout << "\t" << i << ") " << q->options[i] << ", ";
     }
-
     if( q->getType() == "input" || q->getType() == "options" || q->getType() == "numbers" || q->getType() == "yesno") {
-        cout << endl << "\t";
+        cout << endl << "Response: \t";
         string input;
         cin >> input;
         q->setAnswer(input);
     }
-    cout << "************ end of prompt:(" << q->getType() << ") ************" << endl << endl;
+    cout << "\n************ end of prompt:(" << q->getType() << ") ************" << endl ;
     return;
 }
