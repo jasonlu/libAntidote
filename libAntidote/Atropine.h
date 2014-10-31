@@ -24,10 +24,10 @@ public:
     // override
     string getRef();
     Question* getNextQuestion();
-    string calculateAtropine();
 
 private:
-    
+    string calculateAtropine();
+
 };
     
     

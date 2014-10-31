@@ -11,6 +11,7 @@
 		F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */; };
 		F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C119F9BDB400BCF873 /* Antidote.cpp */; };
 		F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C519F9BDB400BCF873 /* Question.cpp */; };
+		F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */; };
 		F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DA173C1A035E4B00072ADA /* Atropine.cpp */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		F064C5C419F9BDB400BCF873 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
 		F064C5C519F9BDB400BCF873 /* Question.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Question.cpp; sourceTree = "<group>"; };
 		F064C5C619F9BDB400BCF873 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BabyBIG.cpp; sourceTree = "<group>"; };
+		F07A1D3B1A040F3100733A85 /* BabyBIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBIG.h; sourceTree = "<group>"; };
 		F0DA173C1A035E4B00072ADA /* Atropine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Atropine.cpp; sourceTree = "<group>"; };
 		F0DA173D1A035E4B00072ADA /* Atropine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atropine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +83,8 @@
 				F064C5B619F9BD9500BCF873 /* main.cpp */,
 				F0DA173C1A035E4B00072ADA /* Atropine.cpp */,
 				F0DA173D1A035E4B00072ADA /* Atropine.h */,
+				F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */,
+				F07A1D3B1A040F3100733A85 /* BabyBIG.h */,
 			);
 			path = libAntidote;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			files = (
 				F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */,
 				F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */,
+				F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */,
 				F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */,
 				F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */,
 				F064C5B719F9BD9500BCF873 /* main.cpp in Sources */,
