@@ -29,14 +29,21 @@ public:
 	// Pure virtual function, the C++ way for abstract method
 	// Append =0 to make a function "pure virtual"
 	// virtual string getResult() = 0;
-	virtual string getRef();
-	virtual bool hasMoreQuestions() = 0;
     virtual Question* getNextQuestion() = 0;
-	virtual bool submit(Question *q) = 0;
+	virtual string getRef();
+    
+    bool hasMoreQuestions();
+    bool submit(Question *q);
 
 protected:
 	string input;
-	double age, heightcm, weightkg;
+	
+    double age, heightcm, weightkg;
+    
+    typedef std::pair<std::string, Question*> strQuestionMapPair;
+    map<string, Question*> prompts;
+    bool moreQuestions;
+    
 	template <typename T> string toStr(const T& t) {
 	   ostringstream os;
 	   os<<t;

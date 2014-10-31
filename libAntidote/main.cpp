@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include "Acetylcysteine.h"
+#include "Atropine.h"
+
 using namespace std;
 using namespace libAntidote;
 
@@ -16,8 +18,8 @@ void showDialog(Question *q);
 int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
-    dote = new Acetylcysteine(20, 80, 180);
-    
+    //dote = new Acetylcysteine(20, 80, 180);
+    dote = new Atropine(20, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();
         showDialog(q);

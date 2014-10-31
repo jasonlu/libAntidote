@@ -15,6 +15,7 @@ Antidote::Antidote(double age, double height, double weight) {
 	this->age = age;
 	this->heightcm = height;
 	this->weightkg = weight;
+    this->moreQuestions = true;
 
 }
 
@@ -25,6 +26,16 @@ Antidote::~Antidote() {
 
 string Antidote::getRef() {
 	return "Ref...";
+}
+    
+bool Antidote::hasMoreQuestions()  {
+    return this->moreQuestions;
+}
+
+    
+bool Antidote::submit(Question *q) {
+    this->moreQuestions = false;
+    return false;
 }
 
 }

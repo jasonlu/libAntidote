@@ -91,7 +91,10 @@ Acetylcysteine::Acetylcysteine(double age, double height, double weight) : Antid
 
 }
 
-    
+Acetylcysteine::~Acetylcysteine() {
+    // TODO Auto-generated destructor stub
+}
+
 Question* Acetylcysteine::getNextQuestion(){
     int q1Ans = prompts["q1"]->getAnswerInt();
     if(q1Ans == 0) {
@@ -138,11 +141,6 @@ Question* Acetylcysteine::getNextQuestion(){
     return prompts["endQ1A0"];
 }
     
-    
-Acetylcysteine::~Acetylcysteine() {
-	// TODO Auto-generated destructor stub
-}
-
 string Acetylcysteine::calculateActivatedCharcoal() {
 	string res = "";
 	if (weightkg > 40) {
