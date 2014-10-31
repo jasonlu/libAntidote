@@ -91,7 +91,10 @@ Acetylcysteine::Acetylcysteine(double age, double height, double weight) : Antid
 
 }
 
-    
+Acetylcysteine::~Acetylcysteine() {
+    // TODO Auto-generated destructor stub
+}
+
 Question* Acetylcysteine::getNextQuestion(){
     int q1Ans = prompts["q1"]->getAnswerInt();
     if(q1Ans == 1) {
@@ -136,11 +139,6 @@ Question* Acetylcysteine::getNextQuestion(){
     return prompts["endQ1A0"];
 }
     
-    
-Acetylcysteine::~Acetylcysteine() {
-	// TODO Auto-generated destructor stub
-}
-
 string Acetylcysteine::calculateActivatedCharcoal() {
 	string res = "";
 	if (weightkg > 40) {
@@ -259,16 +257,5 @@ bool Acetylcysteine::apapToxicityTest() {
 double Acetylcysteine::treatmentThreshold() {
 	return (150) * (pow((M_E), ((-1) * (0.1732868) * (sampleHoursAfterExposure - 4))));
 }
-
-bool Acetylcysteine::hasMoreQuestions()  {
-	return this->moreQuestions;
-}
-
-bool Acetylcysteine::submit(Question *q) {
-
-	this->moreQuestions = false;
-	return false;
-}
-
 
 }

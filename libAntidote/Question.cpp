@@ -58,7 +58,7 @@ void libAntidote::Question::setAnswer(string res) {
     stringstream convert(res);
     if(this->type == "input" || this->type == "string") {
         this->ansInputString = res;
-    } else if(this->type == "yesno" || this->type == "options") {
+    } else if(this->type == "yesno" || this->type == "options" || this->type == "option" || this->type == "int") {
         if (!(convert >> this->ansOptIndex)) {
             this->ansOptIndex = -1;
         }

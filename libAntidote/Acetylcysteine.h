@@ -6,8 +6,8 @@
 // Description : Acetylcysteine Algorithm
 //============================================================================
 
-#ifndef ACETYLCYSTEINE_H_
-#define ACETYLCYSTEINE_H_
+#ifndef __libAntidote__Acetylcysteine_H__
+#define __libAntidote__Acetylcysteine_H__
 
 #include "Antidote.h"
 
@@ -17,33 +17,20 @@ using namespace std;
 
 class Acetylcysteine: public Antidote {
 
-
 public:
 	Acetylcysteine(double age, double height, double weight);
 	virtual ~Acetylcysteine();
     
 	// was string stringAcetylcysteineRef();
 	string getRef();
-	// was string acetylcysteine(double age, double heightcm, double weightkg);
-	string getResult();
-
-	virtual bool hasMoreQuestions();
     virtual Question* getNextQuestion();
-	virtual bool submit(Question *q);
-
-
 
 
 protected:
     
-    typedef std::pair<std::string, Question*> strQuestionMapPair;
-    map<string, Question*> prompts;
-
 
 private:
 	double hoursSinceExposure, toxinLevel, sampleHoursAfterExposure;
-	bool moreQuestions;
-    
     string calculateActivatedCharcoal();
     string calculateAcetylcysteine();
     string bloodSampleSuggestions();
@@ -53,9 +40,5 @@ private:
 };
 
 
-
-
-
-
 }
-#endif /* ACETYLCYSTEINE_H_ */
+#endif /* __libAntidote__Acetylcysteine_H__ */
