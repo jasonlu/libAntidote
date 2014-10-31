@@ -94,7 +94,7 @@ Acetylcysteine::Acetylcysteine(double age, double height, double weight) : Antid
     
 Question* Acetylcysteine::getNextQuestion(){
     int q1Ans = prompts["q1"]->getAnswerInt();
-    if(q1Ans == 1) {
+    if(q1Ans == 0) {
         int q2Ans = prompts["q2"]->getAnswerInt();
         switch(q2Ans) {
             case 0:{
@@ -105,8 +105,10 @@ Question* Acetylcysteine::getNextQuestion(){
                 int q3Ans = prompts["q3"]->getAnswerInt();
                 switch (q3Ans) {
                     case 0:{
-                        this->moreQuestions = false;
-                        return prompts["endQ3A0"];
+                        //if(apapToxicityTest()) {
+                            this->moreQuestions = false;
+                            return prompts["endQ3A0"];
+                        //}
                         break;
                     } case 1: {
                         this->moreQuestions = false;
@@ -126,7 +128,7 @@ Question* Acetylcysteine::getNextQuestion(){
             default:
                 return prompts["q2"];
         }
-    } else if(q1Ans == 0){
+    } else if(q1Ans == 1){
         this->moreQuestions = false;
         return prompts["endQ1A0"];
     } else {
@@ -264,6 +266,11 @@ bool Acetylcysteine::hasMoreQuestions()  {
 	return this->moreQuestions;
 }
 
+    
+/**
+ * TODO: delete this. not needed.
+ *
+ */
 bool Acetylcysteine::submit(Question *q) {
 
 	this->moreQuestions = false;

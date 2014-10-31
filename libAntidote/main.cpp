@@ -27,12 +27,18 @@ int main() {
 }
 
 void showDialog(Question *q) {
-    cout << q->getText() << "( " << q->getType() << " )" << endl;
+    cout << "************ prompt type:(" << q->getType() << ") ************" << endl;
+    cout << "\t" << q->getText() << "( " << q->getType() << " )" << endl;
     for(int i = 0; i < q->options.size(); i++) {
-        cout << i+1 << ")" << q->options[i] << ", ";
+        cout << "\t" << i << ") " << q->options[i] << ", ";
     }
-    string input;
-    cin >> input;
-    q->setAnswer(input);
+
+    if( q->getType() == "input" || q->getType() == "options" || q->getType() == "numbers" || q->getType() == "yesno") {
+        cout << endl << "\t";
+        string input;
+        cin >> input;
+        q->setAnswer(input);
+    }
+    cout << "************ end of prompt:(" << q->getType() << ") ************" << endl << endl;
     return;
 }
