@@ -33,14 +33,12 @@ Acetylcysteine::Acetylcysteine(double age, double height, double weight) : Antid
     
     Question *q2 = new Question("How long has it been since the overdose?");
     string opts1[] = {"Less than 4 hours ago", "4 to 24 hours ago", "More than 24 hours ago"};
-    vector<string> vOpts1(opts1, opts1 + 3);
-    q2->setType("options", vOpts1);
+    q2->setOptions(opts1, 3);
     prompts.insert(strQuestionMapPair("q2", q2));
     
     Question *q3 = new Question("How long after the overdose was the blood sample for acetaminophen level taken?");
     string opts2[] = {"Blood level taken >= 4hours post exposure", "Blood level taken < 4hours post exposure"};
-    vector<string> vOpts2(opts2, opts2 + 2);
-    q3->setType("options", vOpts2);
+    q3->setOptions(opts2, 2);
     prompts.insert(strQuestionMapPair("q3", q3));
     
     Question *endQ1A0 = new Question(string("If the time of overdose is unknown or the blood level is unknown, empirical acetaminophen\n")

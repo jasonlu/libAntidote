@@ -19,6 +19,7 @@ namespace libAntidote {
         "ml/hr for 15 minutes. If no untoward reaction in 15 minutes rate may\n" +
         "be increased to " + rateBIGDuration() + "ml/hr for the duration of the infusion.\n" +
         "Use a separate IV line for infusion and flush with NS for complete administration.";
+        
         string strEnd2 = string("Not indicated in patients aged 1 year and older.  Please refer to\n") +
         "Botulism Antitoxin (non-infant).";
 

@@ -24,8 +24,7 @@ Atropine::Atropine(double age, double height, double weight) : Antidote(age, hei
     "auto-injectors.  Click appropriate button to continue";
     Question *q1 = new Question(stringVialAutoInject);
     string opts1[] = {"Vials", "Autoinjectors"};
-    vector<string> vOpts1(opts1, opts1 + 2);
-    q1->setType("options", vOpts1);
+    q1->setOptions(opts1, 2);
     prompts.insert(strQuestionMapPair("stringVialAutoInject?", q1));
     
     string stringInfant = string("Infants and neonates:\n\n") + toStr(weightkg * 0.01) + " to " + toStr(weightkg * 0.03)+
@@ -57,7 +56,7 @@ Atropine::Atropine(double age, double height, double weight) : Antidote(age, hei
     prompts.insert(strQuestionMapPair("stringDoNotUseAutoInjector", end4));
     
     string  stringAutoChild = string("If using the atropine auto-injector, the dosage is based on weight as follows: if\n") +
-                "If weight between 15 and 40 lb, (roughly 7�18 kg) give 0.5 mg IM via auto-injector.  When used as an\n" +
+                "If weight between 15 and 40 lb, (roughly 7 to 18 kg) give 0.5 mg IM via auto-injector.  When used as an\n" +
                 "antidote, the 0.5 mg dose should be repeated no less often than every 20 to 30 minutes until the signs\n" +
                 "of poisoning are sufficiently lessened or signs of atropine poisoning occur." + d;
     Question *end5 = new Question(stringAutoChild);
@@ -65,7 +64,7 @@ Atropine::Atropine(double age, double height, double weight) : Antidote(age, hei
     prompts.insert(strQuestionMapPair("stringAutoChild", end5));
     
     string stringAutoAdolescent = string("If using the atropine auto-injector, the dosage is based on weight as follows: if\n") +
-                "If weight between 40 and 90 lb, (roughly 18�41 kg) give 1 mg IM via auto-injector.  When used as an\n" +
+                "If weight between 40 and 90 lb, (roughly 18 to 41 kg) give 1 mg IM via auto-injector.  When used as an\n" +
                 "antidote, the 1 mg dose should be repeated no less often than every 20 to 30 minutes until the signs\n" +
                 "of poisoning are sufficiently lessened or signs of atropine poisoning occur." + d;
     Question *end6 = new Question(stringAutoAdolescent);

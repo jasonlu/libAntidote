@@ -31,9 +31,14 @@ int main() {
 void showDialog(Question *q) {
     cout << "************ prompt type:(" << q->getType() << ") ************" << endl;
     cout << "\t" << q->getText() << "( " << q->getType() << " )" << endl;
-    for(int i = 0; i < q->options.size(); i++) {
-        cout << "\t" << i << ") " << q->options[i] << ", ";
+
+    int i = 0;
+    while(q->hasMoreOptions()) {
+        cout << "\t" << i << ") " ;
+        cout << q->getNextOption() << ", ";
+        i++;
     }
+    
     if( q->getType() == "input" || q->getType() == "options" || q->getType() == "numbers" || q->getType() == "yesno") {
         cout << endl << "Response: \t";
         string input;

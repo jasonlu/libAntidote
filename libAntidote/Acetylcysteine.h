@@ -20,11 +20,8 @@ class Acetylcysteine: public Antidote {
 public:
 	Acetylcysteine(double age, double height, double weight);
 	virtual ~Acetylcysteine();
-    
-	// was string stringAcetylcysteineRef();
 	string getRef();
     virtual Question* getNextQuestion();
-
 
 protected:
     
@@ -36,7 +33,6 @@ private:
     string bloodSampleSuggestions();
     bool apapToxicityTest();
     double treatmentThreshold();
-
 };
 
 

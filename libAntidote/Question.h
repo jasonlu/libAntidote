@@ -11,8 +11,6 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <vector>
-
 
 namespace libAntidote {
 using namespace std;
@@ -23,31 +21,41 @@ public:
 	Question(string text);
 	virtual ~Question();
 	string getText();
+    
 	string getType();
 	void setType(string type);
-	void setType(string type, vector<string> opt);
-	void setOptions(vector<string> opt);
     
-	void setAnswer(string res);
+    string* getOptions();
+    void setOptions(string *opt, int count);
     
+    string getOption(int index);
+    void setOption(int index, string opt);
+
+    
+    string getNextOption();
+    bool hasMoreOptions();
+    
+    int getOptionsCount();
+    void setOptionsCount(int count);
+
     bool getAnswerBool();
     string getAnswerString();
     float getAnswerFloat();
     int getAnswerInt();
+    void setAnswer(string res);
 
 
+protected:
     
-    // Properties
-	int number;
     string text;
     string type;
     Question* children;
-    vector<string> options;
-//    string *options;
     
-
-protected:
-
+    //vector<string> options;
+    string *options;
+    //array<string, 10> options;
+    int optionsCount;
+    int currentOptIndex;
 
     int ansOptIndex;
     string ansInputString;

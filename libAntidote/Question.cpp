@@ -8,24 +8,24 @@
 
 #include "Question.h"
 
-namespace libAntidote {
+using namespace std;
 
-Question::Question(string text) {
+libAntidote::Question::Question(string text) {
 	// TODO Auto-generated constructor stub
+    this->options = NULL;
 	this->text = text;
 	this->type = "input";
     this->ansOptIndex = -1;
     this->ansNumberValue = -1;
     this->ansInputString = "-1";
-
+    this->optionsCount = 0;
+    this->currentOptIndex = 0;
 }
 
-Question::~Question() {
+libAntidote::Question::~Question() {
 	// TODO Auto-generated destructor stub
+    delete this->options;
 }
-
-} /* namespace libAntidote */
-using namespace std;
 
 string libAntidote::Question::getText() {
 	return this->text;
@@ -37,22 +37,64 @@ string libAntidote::Question::getType() {
 
 void libAntidote::Question::setType(string type) {
     if(type == "yesno") {
-        this->options.clear();
-        this->options.push_back("yes");
-        this->options.push_back("no");
+        this->options = new string[2];
+        this->options[0] = "No";
+        this->options[1] = "Yes";
+        this->optionsCount = 2;
+    } else {
+        this->optionsCount = 0;
     }
 	this->type = type;
 }
 
-void libAntidote::Question::setType(string type, vector<string> opt) {
-	this->type = type;
-	this->options = opt;
-}
 
-void libAntidote::Question::setOptions(vector<string> opt) {
+void libAntidote::Question::setOptions(string *opt, int count) {
 	this->type = "options";
     this->options = opt;
+    this->setOptionsCount(count);
 }
+
+void libAntidote::Question::setOption(int index, string opt) {
+    this->type = "options";
+    this->options[index] = opt;
+    if(index >= this->optionsCount) {
+        this->setOptionsCount(index + 1);
+    }
+}
+
+void libAntidote::Question::setOptionsCount(int count) {
+    this->optionsCount = count;
+}
+
+int libAntidote::Question::getOptionsCount() {
+    return this->optionsCount;
+}
+
+string *libAntidote::Question::getOptions() {
+    return this->options;
+}
+
+string libAntidote::Question::getOption(int index) {
+    if(index >= optionsCount) {
+        return NULL;
+    }
+    return this->options[index];
+}
+
+string libAntidote::Question::getNextOption() {
+    if(hasMoreOptions()) {
+        int index = currentOptIndex;
+        currentOptIndex++;
+        return this->options[index];
+    } else {
+        return "";
+    }
+}
+
+bool libAntidote::Question::hasMoreOptions() {
+    return (this->currentOptIndex < this->optionsCount);
+}
+
 
 void libAntidote::Question::setAnswer(string res) {
     stringstream convert(res);
@@ -67,7 +109,6 @@ void libAntidote::Question::setAnswer(string res) {
             this->ansNumberValue = -1;
         }
     }
-
 }
 
 bool libAntidote::Question::getAnswerBool() {
