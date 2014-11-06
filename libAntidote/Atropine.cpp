@@ -23,7 +23,9 @@ Atropine::Atropine(double age, double height, double weight) : Antidote(age, hei
     string stringVialAutoInject = string("Atropine for injection comes in two forms - vials and\n") +
     "auto-injectors.  Click appropriate button to continue";
     Question *q1 = new Question(stringVialAutoInject);
-    string opts1[] = {"Vials", "Autoinjectors"};
+    string *opts1 = new string[2];
+    opts1[0] = "Vials";
+    opts1[1] = "Autoinjectors";
     q1->setOptions(opts1, 2);
     prompts.insert(strQuestionMapPair("stringVialAutoInject?", q1));
     
