@@ -22,7 +22,7 @@ int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
     //dote = new Acetylcysteine(20, 80, 180);
-    dote = new CaChloride(30, 80, 180);
+    dote = new Atropine(30, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();
         showDialog(q);

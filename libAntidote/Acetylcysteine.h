@@ -27,12 +27,13 @@ protected:
     
 
 private:
-	double hoursSinceExposure, toxinLevel, sampleHoursAfterExposure;
     string calculateActivatedCharcoal();
     string calculateAcetylcysteine();
     string bloodSampleSuggestions();
-    bool apapToxicityTest();
-    double treatmentThreshold();
+    
+    double hoursSinceExposure, toxinLevel, sampleHoursAfterExposure; // Remove this, unused?
+    bool apapToxicityTest();        // Remove this, unused?
+    double treatmentThreshold();    // Remove this, unused?
 };
 
 

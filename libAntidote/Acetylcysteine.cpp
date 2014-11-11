@@ -221,7 +221,6 @@ namespace libAntidote {
     bool Acetylcysteine::apapToxicityTest() {
         // input = JOptionPane.showInputDialog("How many hours after overdose was the blood sample taken?");
         // sampleHoursAfterExposure = Double.parseDouble(input);
-        
         // input = JOptionPane.showInputDialog("What is the acetaminophen blood plasma level\n in micrograms/ml?");
         // toxinLevel = Double.parseDouble(input);
         

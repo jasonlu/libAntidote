@@ -85,6 +85,7 @@ namespace libAntidote {
         
     }
     
+    
     Atropine::~Atropine() {
         
     }
