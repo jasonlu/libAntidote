@@ -13,6 +13,9 @@
 		F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C519F9BDB400BCF873 /* Question.cpp */; };
 		F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */; };
 		F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DA173C1A035E4B00072ADA /* Atropine.cpp */; };
+		F0DC30911A1180B0005148F4 /* BATbotulism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DC308F1A1180B0005148F4 /* BATbotulism.cpp */; };
+		F0DC30941A11895D005148F4 /* BlackWidow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DC30921A11895D005148F4 /* BlackWidow.cpp */; };
+		F0DC309A1A11904D005148F4 /* CaChloride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DC30981A11904D005148F4 /* CaChloride.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +44,12 @@
 		F07A1D3B1A040F3100733A85 /* BabyBIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBIG.h; sourceTree = "<group>"; };
 		F0DA173C1A035E4B00072ADA /* Atropine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Atropine.cpp; sourceTree = "<group>"; };
 		F0DA173D1A035E4B00072ADA /* Atropine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atropine.h; sourceTree = "<group>"; };
+		F0DC308F1A1180B0005148F4 /* BATbotulism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BATbotulism.cpp; sourceTree = "<group>"; };
+		F0DC30901A1180B0005148F4 /* BATbotulism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATbotulism.h; sourceTree = "<group>"; };
+		F0DC30921A11895D005148F4 /* BlackWidow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackWidow.cpp; sourceTree = "<group>"; };
+		F0DC30931A11895D005148F4 /* BlackWidow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackWidow.h; sourceTree = "<group>"; };
+		F0DC30981A11904D005148F4 /* CaChloride.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaChloride.cpp; sourceTree = "<group>"; };
+		F0DC30991A11904D005148F4 /* CaChloride.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaChloride.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,12 @@
 				F0DA173D1A035E4B00072ADA /* Atropine.h */,
 				F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */,
 				F07A1D3B1A040F3100733A85 /* BabyBIG.h */,
+				F0DC308F1A1180B0005148F4 /* BATbotulism.cpp */,
+				F0DC30901A1180B0005148F4 /* BATbotulism.h */,
+				F0DC30921A11895D005148F4 /* BlackWidow.cpp */,
+				F0DC30931A11895D005148F4 /* BlackWidow.h */,
+				F0DC30981A11904D005148F4 /* CaChloride.cpp */,
+				F0DC30991A11904D005148F4 /* CaChloride.h */,
 			);
 			path = libAntidote;
 			sourceTree = "<group>";
@@ -145,11 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DC30911A1180B0005148F4 /* BATbotulism.cpp in Sources */,
 				F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */,
 				F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */,
 				F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */,
 				F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */,
+				F0DC309A1A11904D005148F4 /* CaChloride.cpp in Sources */,
 				F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */,
+				F0DC30941A11895D005148F4 /* BlackWidow.cpp in Sources */,
 				F064C5B719F9BD9500BCF873 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

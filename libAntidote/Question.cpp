@@ -11,10 +11,10 @@
 using namespace std;
 
 libAntidote::Question::Question(string text) {
-	// TODO Auto-generated constructor stub
+    // TODO Auto-generated constructor stub
     this->options = NULL;
-	this->text = text;
-	this->type = "input";
+    this->text = text;
+    this->type = "end";
     this->ansOptIndex = -1;
     this->ansNumberValue = -1;
     this->ansInputString = "-1";
@@ -23,16 +23,16 @@ libAntidote::Question::Question(string text) {
 }
 
 libAntidote::Question::~Question() {
-	// TODO Auto-generated destructor stub
+    // TODO Auto-generated destructor stub
     delete this->options;
 }
 
 string libAntidote::Question::getText() {
-	return this->text;
+    return this->text;
 }
 
 string libAntidote::Question::getType() {
-	return this->type;
+    return this->type;
 }
 
 void libAntidote::Question::setType(string type) {
@@ -44,12 +44,12 @@ void libAntidote::Question::setType(string type) {
     } else {
         this->optionsCount = 0;
     }
-	this->type = type;
+    this->type = type;
 }
 
 
 void libAntidote::Question::setOptions(string *opt, int count) {
-	this->type = "options";
+    this->type = "options";
     this->options = opt;
     this->setOptionsCount(count);
 }
