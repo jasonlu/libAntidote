@@ -13,6 +13,10 @@ namespace libAntidote {
     
     
     BlackWidow::BlackWidow(double age, double height, double weight) : Antidote(age, height, weight) {
+        string a = "Black Widow envenomation Algorithm.\n",
+        b = "For the treatement of Black Widow (Latrodectus mactans) envenomation.\n\n",
+        c = "\n(Merck & Co., Inc. , 2014)";
+        
         string stringSystemicReaction = string(" As with any administration of serum products, support for ") +
         "systemic reaction should be made ready prior to administration";
         string stringSerumSickness = string(" Patients should be observed for serum sickness for an average ") +

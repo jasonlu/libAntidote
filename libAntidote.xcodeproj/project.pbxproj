@@ -12,6 +12,10 @@
 		F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C119F9BDB400BCF873 /* Antidote.cpp */; };
 		F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C519F9BDB400BCF873 /* Question.cpp */; };
 		F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */; };
+		F0D78AAE1A12D1D2001851AB /* CaDTPA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D78AAC1A12D1D2001851AB /* CaDTPA.cpp */; };
+		F0D78AB11A12D583001851AB /* CoralSnake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D78AAF1A12D583001851AB /* CoralSnake.cpp */; };
+		F0D78AB41A12E324001851AB /* CrotalidaeOvine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D78AB21A12E324001851AB /* CrotalidaeOvine.cpp */; };
+		F0D78AB71A12E728001851AB /* CyanideToxicity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D78AB51A12E728001851AB /* CyanideToxicity.cpp */; };
 		F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DA173C1A035E4B00072ADA /* Atropine.cpp */; };
 		F0DC30911A1180B0005148F4 /* BATbotulism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DC308F1A1180B0005148F4 /* BATbotulism.cpp */; };
 		F0DC30941A11895D005148F4 /* BlackWidow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0DC30921A11895D005148F4 /* BlackWidow.cpp */; };
@@ -42,6 +46,14 @@
 		F064C5C619F9BDB400BCF873 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BabyBIG.cpp; sourceTree = "<group>"; };
 		F07A1D3B1A040F3100733A85 /* BabyBIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBIG.h; sourceTree = "<group>"; };
+		F0D78AAC1A12D1D2001851AB /* CaDTPA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaDTPA.cpp; sourceTree = "<group>"; };
+		F0D78AAD1A12D1D2001851AB /* CaDTPA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaDTPA.h; sourceTree = "<group>"; };
+		F0D78AAF1A12D583001851AB /* CoralSnake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoralSnake.cpp; sourceTree = "<group>"; };
+		F0D78AB01A12D583001851AB /* CoralSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoralSnake.h; sourceTree = "<group>"; };
+		F0D78AB21A12E324001851AB /* CrotalidaeOvine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrotalidaeOvine.cpp; sourceTree = "<group>"; };
+		F0D78AB31A12E324001851AB /* CrotalidaeOvine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrotalidaeOvine.h; sourceTree = "<group>"; };
+		F0D78AB51A12E728001851AB /* CyanideToxicity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CyanideToxicity.cpp; sourceTree = "<group>"; };
+		F0D78AB61A12E728001851AB /* CyanideToxicity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyanideToxicity.h; sourceTree = "<group>"; };
 		F0DA173C1A035E4B00072ADA /* Atropine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Atropine.cpp; sourceTree = "<group>"; };
 		F0DA173D1A035E4B00072ADA /* Atropine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atropine.h; sourceTree = "<group>"; };
 		F0DC308F1A1180B0005148F4 /* BATbotulism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BATbotulism.cpp; sourceTree = "<group>"; };
@@ -100,6 +112,14 @@
 				F0DC30931A11895D005148F4 /* BlackWidow.h */,
 				F0DC30981A11904D005148F4 /* CaChloride.cpp */,
 				F0DC30991A11904D005148F4 /* CaChloride.h */,
+				F0D78AAC1A12D1D2001851AB /* CaDTPA.cpp */,
+				F0D78AAD1A12D1D2001851AB /* CaDTPA.h */,
+				F0D78AAF1A12D583001851AB /* CoralSnake.cpp */,
+				F0D78AB01A12D583001851AB /* CoralSnake.h */,
+				F0D78AB21A12E324001851AB /* CrotalidaeOvine.cpp */,
+				F0D78AB31A12E324001851AB /* CrotalidaeOvine.h */,
+				F0D78AB51A12E728001851AB /* CyanideToxicity.cpp */,
+				F0D78AB61A12E728001851AB /* CyanideToxicity.h */,
 			);
 			path = libAntidote;
 			sourceTree = "<group>";
@@ -160,13 +180,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D78AAE1A12D1D2001851AB /* CaDTPA.cpp in Sources */,
 				F0DC30911A1180B0005148F4 /* BATbotulism.cpp in Sources */,
 				F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */,
 				F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */,
 				F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */,
 				F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */,
+				F0D78AB11A12D583001851AB /* CoralSnake.cpp in Sources */,
 				F0DC309A1A11904D005148F4 /* CaChloride.cpp in Sources */,
+				F0D78AB71A12E728001851AB /* CyanideToxicity.cpp in Sources */,
 				F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */,
+				F0D78AB41A12E324001851AB /* CrotalidaeOvine.cpp in Sources */,
 				F0DC30941A11895D005148F4 /* BlackWidow.cpp in Sources */,
 				F064C5B719F9BD9500BCF873 /* main.cpp in Sources */,
 			);

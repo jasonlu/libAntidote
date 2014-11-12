@@ -27,9 +27,7 @@ namespace libAntidote {
         Question* getNextQuestion();
         
     private:
-        string a = "Botulism Antitoxin(BAT) - ",
-        b = "For the treatement of botulism toxin exposure.\n\n",
-        c = "\n(Cangene Corporation, 2013)";
+
         double calculateDripRate();
         string calculateInfantRate();
         double SalisburyRule();

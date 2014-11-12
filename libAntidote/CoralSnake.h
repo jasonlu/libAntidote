@@ -1,14 +1,14 @@
 //============================================================================
-// Name        : BlackWidow.h
+// Name        : CoralSnake.h
 // Author      : Jon Long & Jason Lu
 // Version     :
 // Copyright   : 2014 BU MET HiLab. All rights reserved.
-// Description : BlackWidow Algorithm
+// Description : CoralSnake Algorithm
 //============================================================================
 
 
-#ifndef __libAntidote__BlackWidow__
-#define __libAntidote__BlackWidow__
+#ifndef __libAntidote__CoralSnake__
+#define __libAntidote__CoralSnake__
 
 #include "Antidote.h"
 
@@ -16,23 +16,24 @@ namespace libAntidote {
     
     using namespace std;
     
-    class BlackWidow: public Antidote {
+    class CoralSnake: public Antidote {
         
     public:
-        BlackWidow(double age, double height, double weight);
-        virtual ~BlackWidow();
+        CoralSnake(double age, double height, double weight);
+        virtual ~CoralSnake();
         
         // override
         string getRef();
         Question* getNextQuestion();
         
     private:
-        
-        
+    
+    
+    
     };
 }
 
-#endif /* defined(__libAntidote__BlackWidow__) */
+#endif /* defined(__libAntidote__CoralSnake__) */
 
 
 
