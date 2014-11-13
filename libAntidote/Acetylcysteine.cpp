@@ -44,51 +44,42 @@ namespace libAntidote {
         whenWasBloodSampleTaken->setOptions(whenWasBloodSampleTakenOpt, 2);
         prompts.insert(strQuestionMapPair("whenWasBloodSampleTaken", whenWasBloodSampleTaken));
         
-        Question *endQ1A0 = new Question(string("If the time of overdose is unknown or the blood level is unknown, empirical acetaminophen\n")
+        Question *timeOfOverdoseUnknown = new Question(string("If the time of overdose is unknown or the blood level is unknown, empirical acetaminophen\n")
                                          + "overdose therapy is recommended until a reliable time can be estimated and acetaminophen\n"
                                          + "blood levels are assesed. The following recommendations suggest doses of activated charcoal \n"
                                          + "and acetylcysteine based on the patient's weight.  Suggested times to draw blood samples \n"
                                          + "are given as well.\n\n"
                                          + calculateActivatedCharcoal() + "\n"
                                          + calculateAcetylcysteine() + "\n"
-                                         + bloodSampleSuggestions()
-                                         );
-        endQ1A0->setType("end");
-        prompts.insert(strQuestionMapPair("endQ1A0", endQ1A0));
+                                         + bloodSampleSuggestions());
+        prompts.insert(strQuestionMapPair("timeOfOverdoseUnknown", timeOfOverdoseUnknown));
         
-        Question *endQ2A0 = new Question(string("The following recommendations are for acetaminophen poisoned patients where the known time\n")
+        Question *timeOfOverdoseLessThenFourHours = new Question(string("The following recommendations are for acetaminophen poisoned patients where the known time\n")
                                          + "of overdose is less than four hours ago.  No blood samples should be taken until 4 hours\n"
                                          + "after overdose.\n\n" + bloodSampleSuggestions() + "\n\n"
                                          + calculateAcetylcysteine() + "\n\n"
-                                         + calculateActivatedCharcoal()
-                                         );
-        endQ2A0->setType("end");
-        prompts.insert(strQuestionMapPair("endQ2A0", endQ2A0));
+                                         + calculateActivatedCharcoal());
+        prompts.insert(strQuestionMapPair("timeOfOverdoseLessThenFourHours", timeOfOverdoseLessThenFourHours));
         
-        Question *endQ2A2 = new Question(string("Though little benefit is seen with acetylcysteine treatment\n")
+        Question *timeOfOverdoseMoreThenTwentyFourHours = new Question(string("Though little benefit is seen with acetylcysteine treatment\n")
                                          + "more than 24 hours after acetaminophen overdose, it is recommended\n"
                                          + "that acetylcysteine therapy be administered regardless of the minimal\n"
                                          + "potential benefit.\n\n"
-                                         + calculateAcetylcysteine()
-                                         );
-        endQ2A2->setType("end");
-        prompts.insert(strQuestionMapPair("endQ2A2", endQ2A2));
+                                         + calculateAcetylcysteine());
+        prompts.insert(strQuestionMapPair("timeOfOverdoseMoreThenTwentyFourHours", timeOfOverdoseMoreThenTwentyFourHours));
         
-        Question *endQ3A0 = new Question(calculateAcetylcysteine() + "\n"+ bloodSampleSuggestions());
-        endQ3A0->setType("end");
-        prompts.insert(strQuestionMapPair("endQ3A0", endQ3A0));
+        Question *bloodsampleTakenGreaterThenFourHours = new Question(calculateAcetylcysteine() + "\n"+ bloodSampleSuggestions());
+        prompts.insert(strQuestionMapPair("bloodsampleTakenGreaterThenFourHours", bloodsampleTakenGreaterThenFourHours));
         
-        Question *endQ3A1 = new Question(string("The following recommendations are for acetaminophen poisoned patients ")
+        Question *bloodsampleTakenLessThenFourHours = new Question(string("The following recommendations are for acetaminophen poisoned patients ")
                                          + "where the known time of overdose is between 4 and 24 hours ago.\n\n"
                                          + "If the acetaminophen blood level is known and the sample was taken\n"
                                          + "at least 4 hours after the time of overdose, you will be given the option\n"
                                          + "to determine if the acetaminophen level exceeds the treatment threshold.\n\n"
                                          + bloodSampleSuggestions() + "\n"
                                          + calculateActivatedCharcoal() + "\n"
-                                         + calculateAcetylcysteine()
-                                         );
-        endQ3A1->setType("end");
-        prompts.insert(strQuestionMapPair("endQ3A1", endQ3A1));
+                                         + calculateAcetylcysteine());
+        prompts.insert(strQuestionMapPair("bloodsampleTakenLessThenFourHours", bloodsampleTakenLessThenFourHours));
         
     }
     
@@ -104,30 +95,32 @@ namespace libAntidote {
             switch(q2Ans) {
                 case 0:{
                     this->moreQuestions = false;
-                    return prompts["endQ2A0"];
+                    return prompts["timeOfOverdoseLessThenFourHours"];
                 } case 1:{
                     int q3Ans = prompts["whenWasBloodSampleTaken"]->getAnswerInt();
                     switch (q3Ans) {
                         case 0:{
                             this->moreQuestions = false;
-                            return prompts["endQ3A0"];
+                            //bloodsampleTakenGreaterThenFourHours
+                            return prompts["bloodsampleTakenLessThenFourHours"];
                         } case 1: {
                             this->moreQuestions = false;
-                            return prompts["endQ3A1"];
+                            //bloodsampleTakenLessThenFourHours
+                            return prompts["bloodsampleTakenLessThenFourHours"];
                         } case -1:
                         default:
                             return prompts["whenWasBloodSampleTaken"];
                     }
                 } case 2: {
                     this->moreQuestions = false;
-                    return prompts["endQ2A2"];
+                    return prompts["timeOfOverdoseMoreThenTwentyFourHours"];
                 } case -1:
                 default:
                     return prompts["howLongSinceOverDose"];
             }
         } else if(q1Ans == 0){
             this->moreQuestions = false;
-            return prompts["endQ1A0"];
+            return prompts["timeOfOverdoseUnknown"];
         } else {
             return prompts["timeOfOverDoseKnown"];
         }

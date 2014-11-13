@@ -30,7 +30,7 @@ namespace libAntidote {
         "Cyanokit (hydroxocobalamin) package insert. " +
         "Columbia, MD: Meridian Medical Technologies, Inc.; 2011 Apr";
         
-        string strAgeLessThenOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n") +
+        string strAgeLessthanOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n") +
         "First Line Therapy - hydroxocobalamin " +
         "Neonates and Infants: Safety and efficacy have not been established.\n\n" +
         "Cyanokit (hydroxocobalamin) package insert. Please contact a Neonatologist immediately. " +
@@ -65,7 +65,7 @@ namespace libAntidote {
         "recur, one half of each dose of sodium nitrite and sodium thiosulfate may be repeated after  " +
         "30 minutes.(ABO Pharmaceuticals, 2013)";
         
-        string strAgeGreaterThenTwentyOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n")+
+        string strAgeGreaterthanTwentyOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n")+
         "First Line Therapy - hydroxocobalamin " +
         "Intravenous infusion dosage of hydroxocobalamin: " +
         "Adults: Initially, 5 g IV infused over 15 minutes (approximately 15 ml/minute). " +
@@ -90,15 +90,15 @@ namespace libAntidote {
         cyanideAlgorithmWarning1->setType("warning");
         Question *cyanideAlgorithmWarning2 = new Question(strCyanideAlgorithmWarning2);
         cyanideAlgorithmWarning2->setType("warning");
-        Question *ageLessThenOne = new Question(strAgeLessThenOne);
+        Question *ageLessthanOne = new Question(strAgeLessthanOne);
         Question *ageBetweenOneAndTwentyOne = new Question(strAgeBetweenOneAndTwentyOne);
-        Question *ageGreaterThenTwentyOne = new Question(strAgeGreaterThenTwentyOne);
+        Question *ageGreaterthanTwentyOne = new Question(strAgeGreaterthanTwentyOne);
         
         prompts.insert(strQuestionMapPair("cyanideAlgorithmWarning1", cyanideAlgorithmWarning1));
         prompts.insert(strQuestionMapPair("cyanideAlgorithmWarning2", cyanideAlgorithmWarning2));
-        prompts.insert(strQuestionMapPair("ageLessThenOne", ageLessThenOne));
+        prompts.insert(strQuestionMapPair("ageLessthanOne", ageLessthanOne));
         prompts.insert(strQuestionMapPair("ageBetweenOneAndTwentyOne", ageBetweenOneAndTwentyOne));
-        prompts.insert(strQuestionMapPair("ageGreaterThenTwentyOne", ageGreaterThenTwentyOne));
+        prompts.insert(strQuestionMapPair("ageGreaterthanTwentyOne", ageGreaterthanTwentyOne));
         
     }
     
@@ -118,13 +118,13 @@ namespace libAntidote {
 
         if(age < 1){
             moreQuestions = false;
-            return prompts["ageLessThenOne"];
+            return prompts["ageLessthanOne"];
         } else if (age >= 1 && age < 21) {
             moreQuestions = false;
             return prompts["ageBetweenOneAndTwentyOne"];
         } else {
             moreQuestions = false;
-            return prompts["ageGreaterThenTwentyOne"];
+            return prompts["ageGreaterthanTwentyOne"];
         }
     }
     
