@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F024DE351A1693150023E13A /* Deferoxamine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE2A1A1693150023E13A /* Deferoxamine.cpp */; };
+		F024DE361A1693150023E13A /* DigiFab.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE2D1A1693150023E13A /* DigiFab.cpp */; };
+		F024DE371A1693150023E13A /* Dimercap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE2F1A1693150023E13A /* Dimercap.cpp */; };
+		F024DE381A1693150023E13A /* EdtaDimercaprol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE311A1693150023E13A /* EdtaDimercaprol.cpp */; };
+		F024DE391A1693150023E13A /* Etoh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE331A1693150023E13A /* Etoh.cpp */; };
 		F064C5B719F9BD9500BCF873 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5B619F9BD9500BCF873 /* main.cpp */; };
 		F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */; };
 		F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F064C5C119F9BDB400BCF873 /* Antidote.cpp */; };
@@ -35,6 +40,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F024DE2A1A1693150023E13A /* Deferoxamine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Deferoxamine.cpp; sourceTree = "<group>"; };
+		F024DE2B1A1693150023E13A /* Deferoxamine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deferoxamine.h; sourceTree = "<group>"; };
+		F024DE2C1A1693150023E13A /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
+		F024DE2D1A1693150023E13A /* DigiFab.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigiFab.cpp; sourceTree = "<group>"; };
+		F024DE2E1A1693150023E13A /* DigiFab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigiFab.h; sourceTree = "<group>"; };
+		F024DE2F1A1693150023E13A /* Dimercap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dimercap.cpp; sourceTree = "<group>"; };
+		F024DE301A1693150023E13A /* Dimercap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dimercap.h; sourceTree = "<group>"; };
+		F024DE311A1693150023E13A /* EdtaDimercaprol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EdtaDimercaprol.cpp; sourceTree = "<group>"; };
+		F024DE321A1693150023E13A /* EdtaDimercaprol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdtaDimercaprol.h; sourceTree = "<group>"; };
+		F024DE331A1693150023E13A /* Etoh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Etoh.cpp; sourceTree = "<group>"; };
+		F024DE341A1693150023E13A /* Etoh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Etoh.h; sourceTree = "<group>"; };
 		F064C5B319F9BD9500BCF873 /* libAntidote */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libAntidote; sourceTree = BUILT_PRODUCTS_DIR; };
 		F064C5B619F9BD9500BCF873 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Acetylcysteine.cpp; sourceTree = "<group>"; };
@@ -120,6 +136,17 @@
 				F0D78AB31A12E324001851AB /* CrotalidaeOvine.h */,
 				F0D78AB51A12E728001851AB /* CyanideToxicity.cpp */,
 				F0D78AB61A12E728001851AB /* CyanideToxicity.h */,
+				F024DE2A1A1693150023E13A /* Deferoxamine.cpp */,
+				F024DE2B1A1693150023E13A /* Deferoxamine.h */,
+				F024DE2C1A1693150023E13A /* dictionary.txt */,
+				F024DE2D1A1693150023E13A /* DigiFab.cpp */,
+				F024DE2E1A1693150023E13A /* DigiFab.h */,
+				F024DE2F1A1693150023E13A /* Dimercap.cpp */,
+				F024DE301A1693150023E13A /* Dimercap.h */,
+				F024DE311A1693150023E13A /* EdtaDimercaprol.cpp */,
+				F024DE321A1693150023E13A /* EdtaDimercaprol.h */,
+				F024DE331A1693150023E13A /* Etoh.cpp */,
+				F024DE341A1693150023E13A /* Etoh.h */,
 			);
 			path = libAntidote;
 			sourceTree = "<group>";
@@ -182,9 +209,14 @@
 			files = (
 				F0D78AAE1A12D1D2001851AB /* CaDTPA.cpp in Sources */,
 				F0DC30911A1180B0005148F4 /* BATbotulism.cpp in Sources */,
+				F024DE381A1693150023E13A /* EdtaDimercaprol.cpp in Sources */,
+				F024DE371A1693150023E13A /* Dimercap.cpp in Sources */,
 				F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */,
+				F024DE361A1693150023E13A /* DigiFab.cpp in Sources */,
 				F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */,
+				F024DE351A1693150023E13A /* Deferoxamine.cpp in Sources */,
 				F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */,
+				F024DE391A1693150023E13A /* Etoh.cpp in Sources */,
 				F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */,
 				F0D78AB11A12D583001851AB /* CoralSnake.cpp in Sources */,
 				F0DC309A1A11904D005148F4 /* CaChloride.cpp in Sources */,

@@ -36,6 +36,9 @@ public:
     bool submit(Question *q);
 
 protected:
+    
+    void insertToMap(string str, Question *question);
+    void insertToMap(string str, string question);
 	string input;
 	
     double age, heightcm, weightkg;
@@ -43,6 +46,9 @@ protected:
     typedef std::pair<std::string, Question*> strQuestionMapPair;
     map<string, Question*> prompts;
     bool moreQuestions;
+    int fdaApproved;
+    enum fdaApprovedEnum {FDA_NOT_APPROVED = 0, FDA_APPROVED = 1, FDA_QUESTIONABLE = 2};
+    int flowchartFinalized;
     
 	template <typename T> string toStr(const T& t) {
 	   ostringstream os;

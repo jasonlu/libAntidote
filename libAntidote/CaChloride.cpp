@@ -13,6 +13,7 @@ namespace libAntidote {
     
     
     CaChloride::CaChloride(double age, double height, double weight) : Antidote(age, height, weight) {
+        this->fdaApproved = FDA_QUESTIONABLE;
         string a = "Calcium Salts -",
         b = "For the treatement of calcium channel blocker and fluoride overdose.\n\n",
         c = "  (Hung YM, 2007) (Haddad, 1996) (Buckley N, 1993) (Sim MT, 2008)  (Kleinman, 2010) (Kerns, 2007) (Hegenbarth, 2008)";
