@@ -20,6 +20,7 @@ libAntidote::Question::Question(string text) {
     this->ansInputString = "-1";
     this->optionsCount = 0;
     this->currentOptIndex = 0;
+    this->read = false;
 }
 
 libAntidote::Question::~Question() {
@@ -81,6 +82,10 @@ string libAntidote::Question::getOption(int index) {
     return this->options[index];
 }
 
+void libAntidote::Question::resetOptionPointer() {
+    currentOptIndex = 0;
+}
+
 string libAntidote::Question::getNextOption() {
     if(hasMoreOptions()) {
         int index = currentOptIndex;
@@ -110,7 +115,11 @@ void libAntidote::Question::setAnswer(string res) {
     } else if(this->type == "info" ||
               this->type == "warning") {
         this->ansOptIndex = 1;
-    } else if(this->type == "numbers" || this->type == "float") {
+        this->read = true;
+    } else if(this->type == "numbers" ||
+              this->type == "number" ||
+              this->type == "double" ||
+              this->type == "float") {
         if (!(convert >> this->ansNumberValue)) {
             this->ansNumberValue = -1;
         }

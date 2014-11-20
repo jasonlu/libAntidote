@@ -31,7 +31,7 @@ public:
     string getOption(int index);
     void setOption(int index, string opt);
 
-    
+    void resetOptionPointer();
     string getNextOption();
     bool hasMoreOptions();
     
@@ -61,6 +61,7 @@ protected:
     string ansInputString;
     double ansNumberValue;
     bool ansYesNo;
+    bool read;
 };
 
 } /* namespace libAntidote */

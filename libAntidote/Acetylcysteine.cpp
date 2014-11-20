@@ -15,7 +15,6 @@ namespace libAntidote {
     Acetylcysteine::Acetylcysteine(double age, double height, double weight) : Antidote(age, height, weight) {
         
         this->sampleHoursAfterExposure = 0;
-        this->hoursSinceExposure = 0;
         this->toxinLevel = 0;
         
         this->age = age;
@@ -81,6 +80,18 @@ namespace libAntidote {
                                          + calculateAcetylcysteine());
         prompts.insert(strQuestionMapPair("bloodsampleTakenLessThenFourHours", bloodsampleTakenLessThenFourHours));
         
+        Question *blookdSampleTakenAfter = new Question("How many hours after overdose was the blood sample taken?");
+        blookdSampleTakenAfter->setType("numbers");
+        prompts.insert(strQuestionMapPair("blookdSampleTakenAfter", blookdSampleTakenAfter));
+        
+        Question *bloodPlasmaLevel = new Question("What is the acetaminophen blood plasma level?");
+        bloodPlasmaLevel->setType("numbers");
+        prompts.insert(strQuestionMapPair("bloodPlasmaLevel", bloodPlasmaLevel));
+        
+        Question *bloodSampleMustTakenFourHoursAfterOverdose = new Question("Blood sample must be taken four hours or more after acetaminophen overdose to determine toxicity.");
+        prompts.insert(strQuestionMapPair("bloodSampleMustTakenFourHoursAfterOverdose", bloodSampleMustTakenFourHoursAfterOverdose));
+
+        
     }
     
     Acetylcysteine::~Acetylcysteine() {
@@ -90,19 +101,45 @@ namespace libAntidote {
     Question* Acetylcysteine::getNextQuestion(){
         this->moreQuestions = true;
         int q1Ans = prompts["timeOfOverDoseKnown"]->getAnswerInt();
-        if(q1Ans == 1) {
+        if(q1Ans == 1) { // known time of overdose
             int q2Ans = prompts["howLongSinceOverDose"]->getAnswerInt();
             switch(q2Ans) {
-                case 0:{
+                case 0:{ // Less than 4 hours ago
                     this->moreQuestions = false;
                     return prompts["timeOfOverdoseLessThenFourHours"];
-                } case 1:{
+                } case 1:{ // 4 to 24 hours ago
                     int q3Ans = prompts["whenWasBloodSampleTaken"]->getAnswerInt();
                     switch (q3Ans) {
                         case 0:{
-                            this->moreQuestions = false;
-                            //bloodsampleTakenGreaterThenFourHours
-                            return prompts["bloodsampleTakenLessThenFourHours"];
+
+                            sampleHoursAfterExposure = prompts["blookdSampleTakenAfter"]->getAnswerFloat();
+                            if(sampleHoursAfterExposure == -1) {
+                                return prompts["blookdSampleTakenAfter"];
+                            } else if (sampleHoursAfterExposure < 4) {
+                                moreQuestions = false;
+                                return prompts["bloodSampleMustTakenFourHoursAfterOverdose"];
+                            }
+
+                            toxinLevel = prompts["bloodPlasmaLevel"]->getAnswerFloat();
+                            //prompts["bloodsampleTakenGreaterThenFourHours"] = new Question(calculateAcetylcysteine() + "\n" + bloodSampleSuggestions());
+                            if(toxinLevel == -1) {
+                                return prompts["blookdSampleTakenAfter"];
+                            } else if (toxinLevel >= treatmentThreshold()) {
+                                
+                                this->moreQuestions = false;
+                                return new Question("Treatment Threshold at " + toStr(sampleHoursAfterExposure)
+                                                    + " hours after overdose =\n\n" + toStr(treatmentThreshold())
+                                                    + " micrograms/ml\n\n Acetylcysteine treatment is recommended.\n\n"
+                                                    + calculateAcetylcysteine() + "\n" + bloodSampleSuggestions());
+                                
+                            } else {
+                                this->moreQuestions = false;
+                                return new Question("Treatment Threshold at " + toStr(sampleHoursAfterExposure)
+                                + " hours after overdose =\n\n" + toStr(treatmentThreshold())
+                                + " micrograms/ml\n\n Antidote treatment is not indicated.");
+                            }
+                            
+                            return prompts["bloodsampleTakenGreaterThenFourHours"];
                         } case 1: {
                             this->moreQuestions = false;
                             //bloodsampleTakenLessThenFourHours
@@ -212,29 +249,19 @@ namespace libAntidote {
     }
     
     bool Acetylcysteine::apapToxicityTest() {
-        // input = JOptionPane.showInputDialog("How many hours after overdose was the blood sample taken?");
-        // sampleHoursAfterExposure = Double.parseDouble(input);
-        // input = JOptionPane.showInputDialog("What is the acetaminophen blood plasma level\n in micrograms/ml?");
-        // toxinLevel = Double.parseDouble(input);
         
         string res = "";
         
-        if (toxinLevel >= treatmentThreshold()
-            && sampleHoursAfterExposure >= 4) {
+        if (toxinLevel >= treatmentThreshold() && sampleHoursAfterExposure >= 4) {
             res = string("Treatment Threshold at ") + toStr(sampleHoursAfterExposure) + ""
             + " hours after overdose =\n\n" + toStr(treatmentThreshold())
             + " micrograms/ml\n\n Acetylcysteine treatment is recommended.";
-        } else if (toxinLevel < treatmentThreshold()
-                   && sampleHoursAfterExposure >= 4) {
+        } else if (toxinLevel < treatmentThreshold() && sampleHoursAfterExposure >= 4) {
             res = string("Treatment Threshold at ") + toStr(sampleHoursAfterExposure) + ""
             + " hours after overdose =\n\n" + toStr(treatmentThreshold())
             + " micrograms/ml\n\n Antidote treatment is not indicated.";
-        } else if (sampleHoursAfterExposure < 4) {
-            res = string("Blood sample must be taken four hours or more after\n")
-            + "acetaminophen overdose to determine toxicity.";
         }
-        if (toxinLevel >= treatmentThreshold()
-            && sampleHoursAfterExposure >= 4)
+        if (toxinLevel >= treatmentThreshold() && sampleHoursAfterExposure >= 4)
             return true;
         else
             return false;

@@ -24,8 +24,8 @@ void showDialog(Question *q);
 int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
-    //dote = new Acetylcysteine(20, 80, 180);
-    dote = new CyanideToxicity(30, 80, 180);
+    dote = new Acetylcysteine(20, 80, 180);
+    //dote = new CyanideToxicity(30, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();
         showDialog(q);
@@ -54,6 +54,7 @@ void showDialog(Question *q) {
         cout << endl << "Response: \t";
         string input;
         cin >> input;
+        cin.ignore();
         q->setAnswer(input);
     }
     cout << "\n************ end of prompt:(" << q->getType() << ") ************" << endl ;

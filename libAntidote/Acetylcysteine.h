@@ -31,9 +31,9 @@ private:
     string calculateAcetylcysteine();
     string bloodSampleSuggestions();
     
-    double hoursSinceExposure, toxinLevel, sampleHoursAfterExposure; // Remove this, unused?
-    bool apapToxicityTest();        // Remove this, unused?
-    double treatmentThreshold();    // Remove this, unused?
+    double toxinLevel, sampleHoursAfterExposure;
+    bool apapToxicityTest();
+    double treatmentThreshold();
 };
 
 
