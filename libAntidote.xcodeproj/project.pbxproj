@@ -42,7 +42,6 @@
 /* Begin PBXFileReference section */
 		F024DE2A1A1693150023E13A /* Deferoxamine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Deferoxamine.cpp; sourceTree = "<group>"; };
 		F024DE2B1A1693150023E13A /* Deferoxamine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deferoxamine.h; sourceTree = "<group>"; };
-		F024DE2C1A1693150023E13A /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
 		F024DE2D1A1693150023E13A /* DigiFab.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigiFab.cpp; sourceTree = "<group>"; };
 		F024DE2E1A1693150023E13A /* DigiFab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigiFab.h; sourceTree = "<group>"; };
 		F024DE2F1A1693150023E13A /* Dimercap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dimercap.cpp; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		F064C5B519F9BD9500BCF873 /* libAntidote */ = {
 			isa = PBXGroup;
 			children = (
+				F064C5B619F9BD9500BCF873 /* main.cpp */,
 				F064C5BD19F9BDB400BCF873 /* Acetylcysteine.cpp */,
 				F064C5BE19F9BDB400BCF873 /* Acetylcysteine.h */,
 				F064C5C119F9BDB400BCF873 /* Antidote.cpp */,
@@ -117,7 +117,6 @@
 				F064C5C419F9BDB400BCF873 /* dictionary.txt */,
 				F064C5C519F9BDB400BCF873 /* Question.cpp */,
 				F064C5C619F9BDB400BCF873 /* Question.h */,
-				F064C5B619F9BD9500BCF873 /* main.cpp */,
 				F0DA173C1A035E4B00072ADA /* Atropine.cpp */,
 				F0DA173D1A035E4B00072ADA /* Atropine.h */,
 				F07A1D3A1A040F3100733A85 /* BabyBIG.cpp */,
@@ -138,7 +137,6 @@
 				F0D78AB61A12E728001851AB /* CyanideToxicity.h */,
 				F024DE2A1A1693150023E13A /* Deferoxamine.cpp */,
 				F024DE2B1A1693150023E13A /* Deferoxamine.h */,
-				F024DE2C1A1693150023E13A /* dictionary.txt */,
 				F024DE2D1A1693150023E13A /* DigiFab.cpp */,
 				F024DE2E1A1693150023E13A /* DigiFab.h */,
 				F024DE2F1A1693150023E13A /* Dimercap.cpp */,

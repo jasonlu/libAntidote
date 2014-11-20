@@ -11,7 +11,6 @@
 
 namespace libAntidote {
     
-    
     DigiFab::DigiFab(double age, double height, double weight) : Antidote(age, height, weight) {
         
         string a = "Digoxin Immune FAB (digoxin toxicity)Antidote Algorithm \n",
@@ -58,6 +57,17 @@ namespace libAntidote {
         nc->setOptions(chronOptions, 2);
         insertToMap("nc", nc);
         
+        Question *inputDose = new Question("Enter dose in milligrams.");
+        inputDose->setType("numbers");
+        insertToMap("inputDose", inputDose);
+        
+
+        Question *inputSerumDigoxinLevels = new Question("Enter serum digoxin levels in ng/ml.");
+        inputSerumDigoxinLevels->setType("numbers");
+        insertToMap("inputSerumDigoxinLevels", inputSerumDigoxinLevels);
+
+        
+        
     }
     
     DigiFab::~DigiFab() {
@@ -65,27 +75,26 @@ namespace libAntidote {
     }
     
     Question* DigiFab::getNextQuestion(){
+        string a = "Digoxin Immune FAB (digoxin toxicity)Antidote Algorithm \n",
+        b = "For the treatement of acute iron toxicity.\n\n",
+        c = "\n (BTG International Inc. , 2012)";
+
         int n1 = prompts["n1"]->getAnswerInt();
         if (n1 == 0){
             int na = prompts["na"]->getAnswerInt();
             if(na == 0){
-                double dose = 0;
-                String input = JOptionPane.showInputDialog("Enter dose in milligrams.");
-                if(input==null){return "Please choose antidote or toxin and click respective begin button.";}
-                while (!numCheck(input)){
-                    JOptionPane.showMessageDialog(null,"Invalid data.  Please re-enter numeric data only.");
-                    input = JOptionPane.showInputDialog("Enter dose in milligrams.");
-                    if(input==null){return "Please choose antidote or toxin and click respective begin button.";}
+                double dose = prompts["inputDose"]->getAnswerFloat();
+                if(dose == -1) {
+                    return prompts["inputDose"];
+                } else {
+                    moreQuestions = false;
+                    return new Question(a + b + "Administer " + toStr(dose / 0.5) + " vials of DigiFab@ IV. \n" +
+                                        "Based on formula - Dose (in vials) = Amount of digoxin ingested (in mg)/0.5 mg/vial)" +
+                                        "Failure to respond to this therapy may indicate to physician that digoxin toxicity may \n" +
+                                        "not be the cause of patient presentation." + c);
                 }
-                dose = Double.parseDouble(input);
-                moreQuestions = false;
-                
-                return new Question(a + b + "Administer " + toStr(dose / 0.5) + " vials of DigiFab@ IV. \n" +
-                "Based on formula - Dose (in vials) = Amount of digoxin ingested (in mg)/0.5 mg/vial)" +
-                "Failure to respond to this therapy may indicate to physician that digoxin toxicity may \n" +
-                "not be the cause of patient presentation."+c);
             }
-            if(na==1){
+            if(na == 1){
                 if(weightkg >= 20){moreQuestions = false; return prompts["adultAcuteUnk"];}
                 else {moreQuestions = false; return prompts["childAcuteUnk"];}
             } else {
@@ -96,19 +105,14 @@ namespace libAntidote {
         if (n1==1){
             int nc = prompts["nc"]->getAnswerInt();
             if(nc == 0){
-                double level = 0;
-                
-                String input = JOptionPane.showInputDialog("Enter serum digoxin levels in ng/ml.");
-                if(input==null){return "Please choose antidote or toxin and click respective begin button.";}
-                while (!numCheck(input)){
-                    JOptionPane.showMessageDialog(null,"Invalid data.  Please re-enter numeric data only.");
-                    input =  JOptionPane.showInputDialog("Enter serum digoxin levels in ng/ml.");
-                    if(input==null){return "Please choose antidote or toxin and click respective begin button.";}
+                double level = prompts["inputSerumDigoxinLevels"]->getAnswerFloat();
+                if(level == -1) {
+                    return prompts["inputSerumDigoxinLevels"];
+                } else {
+                    moreQuestions = false;
+                    return new Question(a + b + "Administer " + toStr(level * weightkg / 100) + " vials of DigiFab� IV. \n" +
+                                        "Dose (in vials) = (Serum digoxin ng/mL)(weight in kg)/100" + c);
                 }
-                
-                level = Double.parseDouble(input);
-                return a + b + "Administer " + toStr(level * weightkg / 100) + " vials of DigiFab� IV. \n" +
-                "Dose (in vials) = (Serum digoxin ng/mL)(weight in kg)/100" + c;
             } else if(nc == 1){
                 if(weightkg>=20){moreQuestions = false; return prompts["adultChronUnk"];}
                 else {moreQuestions = false; return prompts["childChronUnk"];}
