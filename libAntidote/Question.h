@@ -24,6 +24,7 @@ public:
     
 	string getType();
 	void setType(string type);
+    void setType(string type, string unitType);
     
     string* getOptions();
     void setOptions(string *opt, int count);
@@ -40,10 +41,16 @@ public:
 
     bool getAnswerBool();
     string getAnswerString();
-    float getAnswerFloat();
+    double getAnswerFloat();
     int getAnswerInt();
     void setAnswer(string res);
 
+    string getUnitType();
+    double getMin();
+    double getMax();
+
+    void setMin(double min);
+    void setMax(double max);
 
 protected:
     
@@ -62,6 +69,8 @@ protected:
     double ansNumberValue;
     bool ansYesNo;
     bool read;
+    string unitType;
+    double min, max;
 };
 
 } /* namespace libAntidote */

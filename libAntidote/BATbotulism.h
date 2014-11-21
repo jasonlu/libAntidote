@@ -7,8 +7,8 @@
 //============================================================================
 
 
-#ifndef __libAntidote__BabyBIG__
-#define __libAntidote__BabyBIG__
+#ifndef __libAntidote__BATbotulism__
+#define __libAntidote__BATbotulism__
 
 #include "Antidote.h"
 
@@ -34,7 +34,7 @@ namespace libAntidote {
     };
 }
 
-#endif /* defined(__libAntidote__BabyBIG__) */
+#endif /* defined(__libAntidote__BATbotulism__) */
 
 
 

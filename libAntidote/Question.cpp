@@ -21,6 +21,9 @@ libAntidote::Question::Question(string text) {
     this->optionsCount = 0;
     this->currentOptIndex = 0;
     this->read = false;
+    this->min = 0;
+    this->max = 65535;
+    this->unitType = "";
 }
 
 libAntidote::Question::~Question() {
@@ -34,6 +37,11 @@ string libAntidote::Question::getText() {
 
 string libAntidote::Question::getType() {
     return this->type;
+}
+
+void libAntidote::Question::setType(string type, string unitType) {
+    this->setType(type);
+    this->unitType = unitType;
 }
 
 void libAntidote::Question::setType(string type) {
@@ -134,7 +142,7 @@ string libAntidote::Question::getAnswerString() {
     return ansInputString;
 }
 
-float libAntidote::Question::getAnswerFloat() {
+double libAntidote::Question::getAnswerFloat() {
     return ansNumberValue;
 }
 
@@ -142,3 +150,21 @@ int libAntidote::Question::getAnswerInt() {
     return ansOptIndex;
 }
 
+string libAntidote::Question::getUnitType() {
+    return unitType;
+}
+
+void libAntidote::Question::setMin(double min) {
+    this->min = min;
+}
+void libAntidote::Question::setMax(double max) {
+    this->max = max;
+    
+}
+double libAntidote::Question::getMin() {
+    return min;
+}
+double libAntidote::Question::getMax() {
+    return max;
+    
+}
