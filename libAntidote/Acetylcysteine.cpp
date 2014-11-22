@@ -87,7 +87,7 @@ namespace libAntidote {
         prompts.insert(strQuestionMapPair("blookdSampleTakenAfter", blookdSampleTakenAfter));
         
         Question *bloodPlasmaLevel = new Question("What is the acetaminophen blood plasma level?");
-        bloodPlasmaLevel->setType("numbers", "mg/ml");
+        bloodPlasmaLevel->setType("numbers", "microgram/ml");
         prompts.insert(strQuestionMapPair("bloodPlasmaLevel", bloodPlasmaLevel));
         
         Question *bloodSampleMustTakenFourHoursAfterOverdose = new Question("Blood sample must be taken four hours or more after acetaminophen overdose to determine toxicity.");
