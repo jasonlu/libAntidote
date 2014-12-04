@@ -13,8 +13,10 @@
 #include <math.h>
 #include <sstream>
 #include <map>
-
 #include "Question.h"
+
+#define FDA "FDA approved use."
+#define FDO "Unapproved use."
 
 
 namespace libAntidote {
@@ -46,9 +48,9 @@ protected:
     typedef std::pair<std::string, Question*> strQuestionMapPair;
     map<string, Question*> prompts;
     bool moreQuestions;
-    int fdaApproved;
-    enum fdaApprovedEnum {FDA_NOT_APPROVED = 0, FDA_APPROVED = 1, FDA_QUESTIONABLE = 2};
-    int flowchartFinalized;
+
+    //enum fdaApprovedEnum {FDA_NOT_APPROVED = 0, FDA_APPROVED = 1, FDA_QUESTIONABLE = 2};
+    //int flowchartFinalized;
     
 	template <typename T> string toStr(const T& t) {
 	   ostringstream os;

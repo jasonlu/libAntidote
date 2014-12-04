@@ -27,11 +27,12 @@ namespace libAntidote {
         Question* getNextQuestion();
         
     private:
-        string calculateBIG();
-        string rateBIG15();
-        string rateBIGDuration();
-    
-    
+        string a, b, c;
+        double BSA();
+        double calcAdultEncED();
+        double calcAdultED();
+        double calcPedEncED();
+        double calcPedED();
     
     };
 }

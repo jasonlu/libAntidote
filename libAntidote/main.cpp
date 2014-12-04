@@ -15,6 +15,9 @@
 #include "CoralSnake.h"
 #include "CrotalidaeOvine.h"
 #include "CyanideToxicity.h"
+#include "Dimercap.h"
+#include "EdtaDimercaprol.h"
+#include "Etoh.h"
 
 using namespace std;
 using namespace libAntidote;
@@ -24,7 +27,7 @@ void showDialog(Question *q);
 int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
-    dote = new Acetylcysteine(20, 80, 180);
+    dote = new EdtaDimercaprol(20, 80, 180);
     //dote = new CyanideToxicity(30, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();

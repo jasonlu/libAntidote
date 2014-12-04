@@ -16,8 +16,7 @@ Antidote::Antidote(double age, double height, double weight) {
 	this->heightcm = height;
 	this->weightkg = weight;
     this->moreQuestions = true;
-    this->fdaApproved = FDA_APPROVED;
-    this->flowchartFinalized = true;
+    //this->flowchartFinalized = true;
 }
 
 Antidote::~Antidote() {
