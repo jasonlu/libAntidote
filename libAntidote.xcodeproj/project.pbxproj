@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F01ECB431A3117410024FF0B /* Flumazenil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB281A3117410024FF0B /* Flumazenil.cpp */; };
+		F01ECB441A3117410024FF0B /* Fomepizole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB2A1A3117410024FF0B /* Fomepizole.cpp */; };
+		F01ECB451A3117410024FF0B /* Glucagon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB2C1A3117410024FF0B /* Glucagon.cpp */; };
+		F01ECB481A3117410024FF0B /* MetBlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB311A3117410024FF0B /* MetBlue.cpp */; };
+		F01ECB491A3117410024FF0B /* Naloxone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB331A3117410024FF0B /* Naloxone.cpp */; };
+		F01ECB4A1A3117410024FF0B /* Octreotide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB351A3117410024FF0B /* Octreotide.cpp */; };
+		F01ECB4B1A3117410024FF0B /* Physostigmine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB371A3117410024FF0B /* Physostigmine.cpp */; };
+		F01ECB4C1A3117410024FF0B /* PotassiumIodide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB391A3117410024FF0B /* PotassiumIodide.cpp */; };
+		F01ECB4D1A3117410024FF0B /* Pralidoxime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB3B1A3117410024FF0B /* Pralidoxime.cpp */; };
+		F01ECB4E1A3117410024FF0B /* PrussianBlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB3D1A3117410024FF0B /* PrussianBlue.cpp */; };
+		F01ECB4F1A3117410024FF0B /* Pyridoxine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB3F1A3117410024FF0B /* Pyridoxine.cpp */; };
+		F01ECB501A3117410024FF0B /* SodiumBicarbonate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F01ECB411A3117410024FF0B /* SodiumBicarbonate.cpp */; };
 		F024DE351A1693150023E13A /* Deferoxamine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE2A1A1693150023E13A /* Deferoxamine.cpp */; };
 		F024DE361A1693150023E13A /* DigiFab.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE2D1A1693150023E13A /* DigiFab.cpp */; };
 		F024DE371A1693150023E13A /* Dimercap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F024DE2F1A1693150023E13A /* Dimercap.cpp */; };
@@ -40,6 +52,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F01ECB281A3117410024FF0B /* Flumazenil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Flumazenil.cpp; sourceTree = "<group>"; };
+		F01ECB291A3117410024FF0B /* Flumazenil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flumazenil.h; sourceTree = "<group>"; };
+		F01ECB2A1A3117410024FF0B /* Fomepizole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fomepizole.cpp; sourceTree = "<group>"; };
+		F01ECB2B1A3117410024FF0B /* Fomepizole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fomepizole.h; sourceTree = "<group>"; };
+		F01ECB2C1A3117410024FF0B /* Glucagon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Glucagon.cpp; sourceTree = "<group>"; };
+		F01ECB2D1A3117410024FF0B /* Glucagon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glucagon.h; sourceTree = "<group>"; };
+		F01ECB311A3117410024FF0B /* MetBlue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MetBlue.cpp; sourceTree = "<group>"; };
+		F01ECB321A3117410024FF0B /* MetBlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetBlue.h; sourceTree = "<group>"; };
+		F01ECB331A3117410024FF0B /* Naloxone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Naloxone.cpp; sourceTree = "<group>"; };
+		F01ECB341A3117410024FF0B /* Naloxone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Naloxone.h; sourceTree = "<group>"; };
+		F01ECB351A3117410024FF0B /* Octreotide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Octreotide.cpp; sourceTree = "<group>"; };
+		F01ECB361A3117410024FF0B /* Octreotide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Octreotide.h; sourceTree = "<group>"; };
+		F01ECB371A3117410024FF0B /* Physostigmine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Physostigmine.cpp; sourceTree = "<group>"; };
+		F01ECB381A3117410024FF0B /* Physostigmine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physostigmine.h; sourceTree = "<group>"; };
+		F01ECB391A3117410024FF0B /* PotassiumIodide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PotassiumIodide.cpp; sourceTree = "<group>"; };
+		F01ECB3A1A3117410024FF0B /* PotassiumIodide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotassiumIodide.h; sourceTree = "<group>"; };
+		F01ECB3B1A3117410024FF0B /* Pralidoxime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pralidoxime.cpp; sourceTree = "<group>"; };
+		F01ECB3C1A3117410024FF0B /* Pralidoxime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pralidoxime.h; sourceTree = "<group>"; };
+		F01ECB3D1A3117410024FF0B /* PrussianBlue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrussianBlue.cpp; sourceTree = "<group>"; };
+		F01ECB3E1A3117410024FF0B /* PrussianBlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrussianBlue.h; sourceTree = "<group>"; };
+		F01ECB3F1A3117410024FF0B /* Pyridoxine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pyridoxine.cpp; sourceTree = "<group>"; };
+		F01ECB401A3117410024FF0B /* Pyridoxine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pyridoxine.h; sourceTree = "<group>"; };
+		F01ECB411A3117410024FF0B /* SodiumBicarbonate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SodiumBicarbonate.cpp; sourceTree = "<group>"; };
+		F01ECB421A3117410024FF0B /* SodiumBicarbonate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SodiumBicarbonate.h; sourceTree = "<group>"; };
 		F024DE2A1A1693150023E13A /* Deferoxamine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Deferoxamine.cpp; sourceTree = "<group>"; };
 		F024DE2B1A1693150023E13A /* Deferoxamine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deferoxamine.h; sourceTree = "<group>"; };
 		F024DE2D1A1693150023E13A /* DigiFab.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigiFab.cpp; sourceTree = "<group>"; };
@@ -145,6 +181,30 @@
 				F024DE321A1693150023E13A /* EdtaDimercaprol.h */,
 				F024DE331A1693150023E13A /* Etoh.cpp */,
 				F024DE341A1693150023E13A /* Etoh.h */,
+				F01ECB281A3117410024FF0B /* Flumazenil.cpp */,
+				F01ECB291A3117410024FF0B /* Flumazenil.h */,
+				F01ECB2A1A3117410024FF0B /* Fomepizole.cpp */,
+				F01ECB2B1A3117410024FF0B /* Fomepizole.h */,
+				F01ECB2C1A3117410024FF0B /* Glucagon.cpp */,
+				F01ECB2D1A3117410024FF0B /* Glucagon.h */,
+				F01ECB311A3117410024FF0B /* MetBlue.cpp */,
+				F01ECB321A3117410024FF0B /* MetBlue.h */,
+				F01ECB331A3117410024FF0B /* Naloxone.cpp */,
+				F01ECB341A3117410024FF0B /* Naloxone.h */,
+				F01ECB351A3117410024FF0B /* Octreotide.cpp */,
+				F01ECB361A3117410024FF0B /* Octreotide.h */,
+				F01ECB371A3117410024FF0B /* Physostigmine.cpp */,
+				F01ECB381A3117410024FF0B /* Physostigmine.h */,
+				F01ECB391A3117410024FF0B /* PotassiumIodide.cpp */,
+				F01ECB3A1A3117410024FF0B /* PotassiumIodide.h */,
+				F01ECB3B1A3117410024FF0B /* Pralidoxime.cpp */,
+				F01ECB3C1A3117410024FF0B /* Pralidoxime.h */,
+				F01ECB3D1A3117410024FF0B /* PrussianBlue.cpp */,
+				F01ECB3E1A3117410024FF0B /* PrussianBlue.h */,
+				F01ECB3F1A3117410024FF0B /* Pyridoxine.cpp */,
+				F01ECB401A3117410024FF0B /* Pyridoxine.h */,
+				F01ECB411A3117410024FF0B /* SodiumBicarbonate.cpp */,
+				F01ECB421A3117410024FF0B /* SodiumBicarbonate.h */,
 			);
 			path = libAntidote;
 			sourceTree = "<group>";
@@ -206,23 +266,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0D78AAE1A12D1D2001851AB /* CaDTPA.cpp in Sources */,
+				F01ECB441A3117410024FF0B /* Fomepizole.cpp in Sources */,
+				F01ECB481A3117410024FF0B /* MetBlue.cpp in Sources */,
 				F0DC30911A1180B0005148F4 /* BATbotulism.cpp in Sources */,
 				F024DE381A1693150023E13A /* EdtaDimercaprol.cpp in Sources */,
 				F024DE371A1693150023E13A /* Dimercap.cpp in Sources */,
 				F064C5CF19F9BDB400BCF873 /* Question.cpp in Sources */,
+				F01ECB4B1A3117410024FF0B /* Physostigmine.cpp in Sources */,
+				F01ECB431A3117410024FF0B /* Flumazenil.cpp in Sources */,
+				F01ECB4A1A3117410024FF0B /* Octreotide.cpp in Sources */,
 				F024DE361A1693150023E13A /* DigiFab.cpp in Sources */,
+				F01ECB4F1A3117410024FF0B /* Pyridoxine.cpp in Sources */,
 				F0DA173E1A035E4B00072ADA /* Atropine.cpp in Sources */,
+				F01ECB491A3117410024FF0B /* Naloxone.cpp in Sources */,
 				F024DE351A1693150023E13A /* Deferoxamine.cpp in Sources */,
+				F01ECB4C1A3117410024FF0B /* PotassiumIodide.cpp in Sources */,
+				F01ECB501A3117410024FF0B /* SodiumBicarbonate.cpp in Sources */,
 				F07A1D3C1A040F3100733A85 /* BabyBIG.cpp in Sources */,
 				F024DE391A1693150023E13A /* Etoh.cpp in Sources */,
 				F064C5CD19F9BDB400BCF873 /* Antidote.cpp in Sources */,
 				F0D78AB11A12D583001851AB /* CoralSnake.cpp in Sources */,
+				F01ECB451A3117410024FF0B /* Glucagon.cpp in Sources */,
 				F0DC309A1A11904D005148F4 /* CaChloride.cpp in Sources */,
 				F0D78AB71A12E728001851AB /* CyanideToxicity.cpp in Sources */,
 				F064C5CB19F9BDB400BCF873 /* Acetylcysteine.cpp in Sources */,
 				F0D78AB41A12E324001851AB /* CrotalidaeOvine.cpp in Sources */,
 				F0DC30941A11895D005148F4 /* BlackWidow.cpp in Sources */,
 				F064C5B719F9BD9500BCF873 /* main.cpp in Sources */,
+				F01ECB4E1A3117410024FF0B /* PrussianBlue.cpp in Sources */,
+				F01ECB4D1A3117410024FF0B /* Pralidoxime.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
