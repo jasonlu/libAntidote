@@ -15,7 +15,7 @@ namespace libAntidote {
     Etoh::Etoh(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Ethanol Antidote Algorithm \n",
         b = string("For the treatment of methanol and ethylene glycol toxicity. ") + FDO + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         Question *chronic = new Question(a+b+
                                          "Administer loading dose of " + toStr(weightkg * 8 ) + " ml (8ml/kg) of 10% ethanol in D5W IV via \n" +
                                          "central line followed by a maintenance dose of " + toStr(weightkg * 2) + " ml/hr (2ml/kg/hr) to achieve a \n" +

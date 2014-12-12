@@ -15,7 +15,7 @@ namespace libAntidote {
     Glucagon::Glucagon(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Glucagon Antidote Algorithm \n",
         b = string("For the treatment of beta blocker and Ca channel blocker toxicity.  ")+FDO+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         Question *warning = new Question(string("Glucagon is used for Ca-channel blocker and beta blocker induced myocardial depression.\n") +
                                       "Glucagon alone is not an antidote for Ca-channel blocker and beta blocker toxicity.\n" +
                                       "Please refer to the Calcium Salts algorithm.");

@@ -15,7 +15,7 @@ namespace libAntidote {
     Dimercap::Dimercap(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Dimercaprol (Heavy metal toxicity) Antidote Algorithm \n";
         b = string("For the treatment of heavy metal toxicity (arsenic, gold, mercury).  ") + FDA + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         insertToMap("arsenicMild", a + b + "For mild arsenic poisoning, administer " + toStr(2.5 * weightkg) +
                     " mg of dimercaprol (2.5 mg/kg of body weight) " +

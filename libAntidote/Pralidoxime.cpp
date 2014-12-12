@@ -16,7 +16,7 @@ namespace libAntidote {
         
         a = "Pralidoxime Antidote Algorithm \n",
         b = string("For the secondary treatment of organophosphate pesticide toxicity.  ")+FDA+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         string praWarning = a+b+
         "Pralidoxime is not to be used alone in organophosphate poisoning. \n" +

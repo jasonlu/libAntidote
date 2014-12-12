@@ -15,7 +15,7 @@ namespace libAntidote {
     Physostigmine::Physostigmine(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Physostigmine Antidote Algorithm \n",
         b = string("As a secondary treatment of anticholinergic syndrome.  ") + FDA + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         
     }
     

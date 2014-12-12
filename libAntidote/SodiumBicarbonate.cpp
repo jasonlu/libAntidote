@@ -16,7 +16,7 @@ namespace libAntidote {
         
         a = "Sodium Bicarbonate Antidote Algorithm \n",
         b = string("For the treatment of sodium channel blocker toxicity.  ")+FDA+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         Question *bicMess = new Question(a+b+
         "Sodium Bicarbonate is used to reverse the cardiotoxic effects of \n" +

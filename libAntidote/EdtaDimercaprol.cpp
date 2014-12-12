@@ -15,7 +15,7 @@ namespace libAntidote {
     EdtaDimercaprol::EdtaDimercaprol(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Ca-EDTA and Dimercaprol Algorithm \n",
         b = string("For the treatment of lead encephalopathy and toxicity.  ") + FDA + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         Question* strEncephalopathy = new Question(a + b + "Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg)IM for first dose followed by " +
                                                    toStr(weightkg*4)+"mg\n" +
                                                    "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of \n" +

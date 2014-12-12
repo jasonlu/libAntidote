@@ -16,7 +16,7 @@ namespace libAntidote {
         
         a = "Methylene Blue Antidote Algorithm \n",
         b = string("For the treatment of methemoglobinemia.  ") + FDA + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         Question *nitrateQ = new Question("Is the patient's methemoglobinemia nitrate induced as a result of cyanide therapy?");
         nitrateQ->setType("yesno");

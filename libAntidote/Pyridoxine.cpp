@@ -17,7 +17,7 @@ namespace libAntidote {
         
         a = "Pyridoxine Antidote Algorithm \n",
         b = string("For the treatment of isonizide and hydrazine/gyromitrin toxicity.  ")+FDA+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         string childUnknown = ""+a+b+
         "Administer "+toStr(weightkg*70)+" mg (70mg/kg, max 5000 mg) at a \n" +

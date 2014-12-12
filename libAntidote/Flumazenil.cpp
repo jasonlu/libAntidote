@@ -15,7 +15,7 @@ namespace libAntidote {
     Flumazenil::Flumazenil(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Flumazenil Antidote Algorithm. \n",
         b = string("For the treatment of benzodiazepine toxicity.  ") + FDA + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         string flumWarning = string("\n\n") +
         "If a patient has not responded 5 minutes after receiving a cumulative maximum dose\n" +

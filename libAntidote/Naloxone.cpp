@@ -15,7 +15,7 @@ namespace libAntidote {
     Naloxone::Naloxone(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Naloxone Antidote Algorithm-\n",
         b = string("For the treatment of opioid toxicity.  ")+FDA+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         Question *IVCI = new Question(string("Caution: Intravenous continuous infusion of naloxone ") +
                                       "is indicated only when patient has failed bolus naloxone " +

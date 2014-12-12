@@ -15,7 +15,7 @@ namespace libAntidote {
     PrussianBlue::PrussianBlue(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Prussian Blue Antidote Algorithm \n",
         b = string("For the treatment of radioactive Cs-137 and thallium toxicity.  ")+FDA+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         string upto2YO = ""+a+b+
         "Dosing in  children 0-2 years of age has not been established.  However, \n" +

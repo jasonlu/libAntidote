@@ -15,7 +15,7 @@ namespace libAntidote {
     Fomepizole::Fomepizole(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Fomepizole Antidote Algorithm \n",
         b = string("For the treatment of methanol and ethylene glycol toxicity.  ") + FDA + "\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         string fomeWarn = a+b+
         "Antizol�(fomepizole) should not be given undiluted or \n" +

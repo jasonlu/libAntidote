@@ -15,7 +15,7 @@ namespace libAntidote {
     PotassiumIodide::PotassiumIodide(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Potassium Iodide Antidote Algorithm \n",
         b = string("For the treatment of radioactive I-131 exposure.  ")+FDA+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         Question* potContra = new Question(a+b+
         "Contraindicated in patients that are hypersensitive to Iodide, \n" +
         "iodine; dermatitis herpetiformis; hypocomplementemic vasculitis; \n" +

@@ -15,7 +15,7 @@ namespace libAntidote {
     Octreotide::Octreotide(double age, double height, double weight) : Antidote(age, height, weight) {
         a = "Octreotide Antidote Algorithm \n",
         b = string("As a secondary agent for the treatment of sulfonylurea induced hypoglycemia.  ")+FDO+"\n\n",
-        c = getRef();
+        c = "";//getRef();
         
         string octIVCI = string("\n\n") +
         "In the event of persistent hypoglycemia continuous infusion \n" +
