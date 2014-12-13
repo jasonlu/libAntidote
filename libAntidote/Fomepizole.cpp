@@ -52,7 +52,7 @@ namespace libAntidote {
         insertToMap("isGlycolKnown", isGlycolKnown);
         
         Question *enterConcentration = new Question("Please enter methanol or ethylene glycol serum \nconcentration in mg/dL.");
-        enterConcentration->setType("numbers");
+        enterConcentration->setType("numbers", "mg/dL");
         insertToMap("enterConcentration", enterConcentration);
         
         

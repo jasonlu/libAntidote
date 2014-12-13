@@ -17,7 +17,8 @@
 #include "CyanideToxicity.h"
 #include "Dimercap.h"
 #include "EdtaDimercaprol.h"
-#include "Etoh.h"
+#include "Pralidoxime.h"
+#include "Pyridoxine.h"
 
 using namespace std;
 using namespace libAntidote;
@@ -27,7 +28,7 @@ void showDialog(Question *q);
 int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
-    dote = new EdtaDimercaprol(20, 80, 180);
+    dote = new Pyridoxine(20, 80, 180);
     //dote = new CyanideToxicity(30, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();

@@ -20,17 +20,17 @@ namespace libAntidote {
         c = "";//getRef();
         
         string childUnknown = ""+a+b+
-        "Administer "+toStr(weightkg*70)+" mg (70mg/kg, max 5000 mg) at a \n" +
+        "Administer "+toStr(weightkg*70)+" mg (70mg/kg, max 5000 mg) at a " +
         "rate of 500-1000 mg/minute may repeat dose Q5-10 minutes as needed to control seizure."+c;
         insertToMap("childUnknown", childUnknown);
         
         string adultUnknown = ""+a+b+
-        "Administer 5000mg IV at a rate of 500-1000mg/min.  May repeat Q5-10min as needed to\n" +
+        "Administer 5000mg IV at a rate of 500-1000mg/min.  May repeat Q5-10min as needed to " +
         "control seizures."+c;
         insertToMap("adultUnknown", adultUnknown);
         
         string hydrazines = ""+a+b+
-        "Administer "+toStr(weightkg*25)+" mg IV (25mg/kg in children and adults ) \n" +
+        "Administer "+toStr(weightkg*25)+" mg IV (25mg/kg in children and adults) " +
         "over 15-30min.  May repeat dose as necessary to control seizures (max 15g/day) "+c;
         insertToMap("hydrazines", hydrazines);
         
@@ -55,32 +55,31 @@ namespace libAntidote {
     Question* Pyridoxine::getNextQuestion(){
         int n1 = prompts["isoHyd"]->getAnswerInt();
         if (n1==0){
+            int na = prompts["isDoseKnown"]->getAnswerInt();
             
-            if(weightkg>71 || age>18){
-                int na = prompts["isDoseKnown"]->getAnswerInt();
-                if(na==0){
-                    double dose = prompts["enterDose"]->getAnswerFloat();
+            if(na==0){
+                double dose = prompts["enterDose"]->getAnswerFloat();
+                if(dose == -1) {
+                    return prompts["enterDose"];
+                } else {
                     moreQuestions = false;
-                    return new Question(a+b+pyrAdultKnown(dose)+c);
-                } else if(na==1){
-                    moreQuestions = false;
+                    if(weightkg>71 || age>18){
+                        return new Question(a+b+pyrAdultKnown(dose)+c);
+                    } else {
+                        return new Question(a+b+pyrChildKnown(dose)+c);
+                    }
+                }
+            } else if(na==1){
+                moreQuestions = false;
+                if(weightkg>71 || age>18){
                     return prompts["adultUnknown"];
                 } else {
-                    return prompts["isDoseKnown"];
+                    return prompts["childUnknown"];
                 }
             } else {
-                int na = prompts["isDoseKnown"]->getAnswerInt();
-                if(na==0){
-                    double dose = prompts["enterDose"]->getAnswerFloat();
-                    moreQuestions = false;
-                    return new Question(a+b+pyrChildKnown(dose)+c);
-                } else if(na==1){
-                    moreQuestions = false;
-                    return prompts["childUnknown"];
-                } else {
-                    return prompts["isDoseKnown"];
-                }
+                return prompts["isDoseKnown"];
             }
+            
         } else if (n1 == 1){
             moreQuestions = false;
             return prompts["hydrazines"];
@@ -93,12 +92,12 @@ namespace libAntidote {
     
     string Pyridoxine::pyrAdultKnown(double dose){
         if(dose>5000){
-            return string("Administer doses of 5000 mg pyridoxine IV at a rate of 500-1000 mg/minute\n") +
+            return string("Administer doses of 5000 mg pyridoxine IV at a rate of 500-1000 mg/minute ") +
             "every 5-10 minutes to control seizures.  Do not exceed a total dose of "+toStr(dose)+" mg.\n" +
-            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose\n" +
+            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose " +
             "may be given via IV infusion over 4-6 hours";
         } else {
-            return string("Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in\n") +
+            return string("Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in ") +
             "multiple divided doses.";
         }
     }
@@ -107,13 +106,13 @@ namespace libAntidote {
         
         if(dose>weightkg*70){
             return
-            "Administer doses of "+toStr(weightkg*70)+" mg pyridoxine IV at a rate of 500-1000 mg/minute\n" +
+            "Administer doses of "+toStr(weightkg*70)+" mg pyridoxine IV at a rate of 500-1000 mg/minute " +
             "every 5-10 minutes to control seizures.  Do not exceed a total dose of "+toStr(dose)+" mg.\n" +
-            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose\n" +
+            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose " +
             "may be given via IV infusion over 4-6 hours";
         }else {
             return
-            "Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in\n" +
+            "Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in " +
             "multiple divided doses.";
         }
     }
