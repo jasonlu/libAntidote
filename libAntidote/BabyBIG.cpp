@@ -14,13 +14,16 @@ namespace libAntidote {
     
     BabyBIG::BabyBIG(double age, double height, double weight) : Antidote(age, height, weight) {
         
-        string strEnd1 = string("Give ") + calculateBIG()+"mg of Baby-BIG via IV infusion in microbore \n" +
-        "tubing passing through an 18 micron filter at a rate of\n" + rateBIG15() +
-        "ml/hr for 15 minutes. If no untoward reaction in 15 minutes rate may\n" +
+        string a = "Baby BIG (Botulism Immune Globulin - Infant) Antidote Algorithm \n",
+        b = string("For the treatment of infant exposure to botulism neurotoxins ") + "A and B.  " + FDA + "\n\n";
+        
+        string strEnd1 = a + b + calculateBIG()+"mg of Baby-BIG via IV infusion in microbore " +
+        "tubing passing through an 18 micron filter at a rate of " + rateBIG15() +
+        "ml/hr for 15 minutes. If no untoward reaction in 15 minutes rate may " +
         "be increased to " + rateBIGDuration() + "ml/hr for the duration of the infusion.\n" +
         "Use a separate IV line for infusion and flush with NS for complete administration.";
         
-        string strEnd2 = string("Not indicated in patients aged 1 year and older.  Please refer to\n") +
+        string strEnd2 = a + b + "Not indicated in patients aged 1 year and older.  Please refer to " +
         "Botulism Antitoxin (non-infant).";
 
         Question *end1 = new Question(strEnd1);
@@ -61,9 +64,8 @@ namespace libAntidote {
     
     
     string BabyBIG::getRef() {
-        return string("References for BabyBIG Algorithm\n\n")+
-                      "Baxter Healthcare Corporation. (2011, October 1). BabyBIG [Botulism Immune \n" +
-                      "Globulin Intravenous (Human) (BIG-IV)]. Package Insert. Westlake Village, \n" +
+        return string("Baxter Healthcare Corporation. (2011, October 1). BabyBIG [Botulism Immune ") +
+                      "Globulin Intravenous (Human) (BIG-IV)]. Package Insert. Westlake Village, " +
                       "California, U.S.: Baxter Healthcare Corporation.";
     }
 }

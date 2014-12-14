@@ -24,7 +24,7 @@ namespace libAntidote {
         
         string titrate = "\nTitrate to desired response.  Glucagon is compatible with D5W or NS.";
         string glucChild = a + b + "Initial bolus of " + toStr(weightkg*30) +
-        " mcg to " + toStr(weightkg*150) + " mcg (30 to 150 mcg/kg) of glucagon followed by \n" +
+        " mcg to " + toStr(weightkg*150) + " mcg (30 to 150 mcg/kg) of glucagon followed by " +
         toStr(weightkg * 10) + " mcg to " + toStr( calcChild() ) + " mcg IVCI (10 to 70mcg/kg up to max 5000 mcg/hr) " +
         titrate + c;
         insertToMap("glucChild", glucChild);
@@ -72,10 +72,9 @@ namespace libAntidote {
     }
     
     string Glucagon::getRef() {
-        return string("\n\nReferences for Glucagon Algorithm:\n\n") +
-        "Hegenbarth, M. A. (2008). Preparing for Pediatric Emergencies: Drugs to Consider. \n" +
+        return string("Hegenbarth, M. A. (2008). Preparing for Pediatric Emergencies: Drugs to Consider. ") +
         "Pediatrics , 121 (2), 433-443.\n\n" +
-        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart . Kansas City, \n" +
+        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart . Kansas City, " +
         "Kansas, U.S.: Thomas Land Publishers, Inc.";
     }
 }

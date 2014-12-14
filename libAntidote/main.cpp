@@ -18,6 +18,8 @@
 #include "Dimercap.h"
 #include "EdtaDimercaprol.h"
 #include "Etoh.h"
+#include "PrussianBlue.h"
+#include "Naloxone.h"
 
 using namespace std;
 using namespace libAntidote;
@@ -27,12 +29,13 @@ void showDialog(Question *q);
 int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
-    dote = new EdtaDimercaprol(20, 80, 180);
+    dote = new CoralSnake(20, 80, 180);
     //dote = new CyanideToxicity(30, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();
         showDialog(q);
     }
+    cout << dote->getRef();
     
     return 0;
 }

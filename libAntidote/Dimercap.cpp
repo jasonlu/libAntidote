@@ -94,8 +94,7 @@ namespace libAntidote {
     
     
     string Dimercap::getRef() {
-        return string("\n\nReferences for Dimercaprol Algorithm: \n\n") +
-                      "Taylor Pharmaceuticals . (2007, August 1). DIMERCAPROL INJECTION, USP. \n" +
+        return string("Taylor Pharmaceuticals . (2007, August 1). DIMERCAPROL INJECTION, USP. \n") +
                       "Package Insert . Decatur, IL, U.S.: Taylor Pharmaceuticals .";
     }
 }

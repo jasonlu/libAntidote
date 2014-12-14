@@ -24,11 +24,18 @@ namespace libAntidote {
         insertToMap("IVCI", IVCI);
         
         string nalBolusAdult = a+b+ "Administer 0.4-2mg naloxone IVP.  Dose may be repeated every 2-3 minutes up to 10mg."+c;
+        insertToMap("nalBolusAdult", nalBolusAdult);
         string nalIVCIAdult = a+b+ "Administer 0.4-0.8mg/hr of naloxone IVCI inititially and titrate to response."+c;
+        insertToMap("nalIVCIAdult", nalIVCIAdult);
         string nalBolusChild = a+b+ "Administer 2mg IVP every 2-3 minutes as necessary.  Maximum 10mg total dose"+c;
+        insertToMap("nalBolusChild", nalBolusChild);
         string nalIVCIChild = a+b+ "Administer 0.4-0.8mg/hr of naloxone IVCI initially and titrate to response."+c;
+        insertToMap("nalIVCIChild", nalIVCIChild);
         string nalBolusNeo = a+b+ "Administer "+toStr(calcNeoBolus() )+" mg (0.1mg/kg) naloxone IVP up to 2mg.  May repeat dose if necessary."+c;
-        string nalIVCINeo = ""+a+b+ "Administer "+toStr(weightkg*0.04)+"-"+toStr(weightkg*0.16)+" mg/hr (0.04-0.16mg/kg/hr) of naloxone IVCI initially and titrate to response. "+c;
+        insertToMap("nalBolusNeo", nalBolusNeo);
+        string nalIVCINeo = a+b+ "Administer "+toStr(weightkg*0.04)+"-"+toStr(weightkg*0.16)+" mg/hr (0.04-0.16mg/kg/hr) of naloxone IVCI initially and titrate to response. "+c;
+        insertToMap("nalIVCINeo", nalIVCINeo);
+        
         Question *chooseIVCI = new Question("Choose Naloxone IV Bolus or IV continuous infusion therapy?");
         chooseIVCI->setOptions(new string[2]{"Bolus", "IVCI"}, 2);
         insertToMap("chooseIVCI", chooseIVCI);
@@ -50,7 +57,7 @@ namespace libAntidote {
                 moreQuestions = false;
                 return prompts["nalBolusAdult"];
             } else if (n1==1){
-                if(prompts["nalIVCIAdult"]->getAnswerInt() == -1) {
+                if(prompts["IVCI"]->getAnswerInt() == -1) {
                     return prompts["IVCI"];
                 }
                 moreQuestions = false;
@@ -64,7 +71,7 @@ namespace libAntidote {
                     moreQuestions = false;
                     return prompts["nalBolusNeo"];
                 } else if (n1 == 1){
-                    if(prompts["nalIVCIAdult"]->getAnswerInt() == -1) {
+                    if(prompts["IVCI"]->getAnswerInt() == -1) {
                         return prompts["IVCI"];
                     }
                     moreQuestions = false;
@@ -77,7 +84,7 @@ namespace libAntidote {
                     moreQuestions = false;
                     return prompts["nalBolusChild"];
                 } else if (n1 == 1){
-                    if(prompts["nalIVCIAdult"]->getAnswerInt() == -1) {
+                    if(prompts["IVCI"]->getAnswerInt() == -1) {
                         return prompts["IVCI"];
                     }
                     moreQuestions = false;
@@ -103,17 +110,17 @@ namespace libAntidote {
     
     
     string Naloxone::getRef() {
-        return string("\n\nReferences for Naloxone Algorithm: \n\n") +
-        "Hegenbarth, M. A. (2008). Preparing for Pediatric Emergencies: \n" +
+        return string("") +
+        "Hegenbarth, M. A. (2008). Preparing for Pediatric Emergencies: " +
         "Drugs to Consider. Pediatrics , 121 (2), 433-443.\n\n" +
-        "Hospira, Inc. . (2009, November 1). Atropine Sulfate . Atropine \n" +
+        "Hospira, Inc. . (2009, November 1). Atropine Sulfate . Atropine " +
         "Sulfate Package Insert . Lake Forest, Illinois, U.S.: Hospira, Inc.\n\n" +
-        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart . Kansas \n" +
+        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart . Kansas " +
         "City, Kansas, U.S.: Thomas Land Publishers, Inc.\n\n" +
-        "Kleinman, M. E., Chameides, L., Schexnayder, S. M., Samson, R. A., \n" +
-        "Hazinski, M. F., Atkins, D. L., et al. (2010, November 10). Part 14: \n" +
-        "Pediatric Advanced Life Support: 2010 American Heart Association Guidelines \n" +
-        "for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. \n" +
+        "Kleinman, M. E., Chameides, L., Schexnayder, S. M., Samson, R. A., " +
+        "Hazinski, M. F., Atkins, D. L., et al. (2010, November 10). Part 14: " +
+        "Pediatric Advanced Life Support: 2010 American Heart Association Guidelines " +
+        "for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. " +
         "Circulation . Dallas, TX, U.S.: American Heart Association.";
     }
 }

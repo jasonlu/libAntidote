@@ -17,10 +17,9 @@ namespace libAntidote {
         this->sampleHoursAfterExposure = 0;
         this->toxinLevel = 0;
         
-        this->age = age;
-        this->heightcm = height;
-        this->weightkg = weight;
-        this->moreQuestions = true;
+        string a = "Acetylcysteine Antidote Algorithm\n";
+        string b = string("For the treatment of acetaminophen toxicity.  ") + FDA + "\n\n";
+        
         
         
         Question *timeOfOverDoseKnown = new Question("Is the time of overdose and blood level of acetaminophen known reliably?");
@@ -43,7 +42,7 @@ namespace libAntidote {
         whenWasBloodSampleTaken->setOptions(whenWasBloodSampleTakenOpt, 2);
         prompts.insert(strQuestionMapPair("whenWasBloodSampleTaken", whenWasBloodSampleTaken));
         
-        Question *timeOfOverdoseUnknown = new Question(string("If the time of overdose is unknown or the blood level is unknown, empirical acetaminophen ")
+        Question *timeOfOverdoseUnknown = new Question(a + b + "If the time of overdose is unknown or the blood level is unknown, empirical acetaminophen "
                                                        + "overdose therapy is recommended until a reliable time can be estimated and acetaminophen "
                                                        + "blood levels are assesed. The following recommendations suggest doses of activated charcoal  "
                                                        + "and acetylcysteine based on the patient's weight.  Suggested times to draw blood samples  "
@@ -53,14 +52,14 @@ namespace libAntidote {
                                                        + bloodSampleSuggestions());
         prompts.insert(strQuestionMapPair("timeOfOverdoseUnknown", timeOfOverdoseUnknown));
         
-        Question *timeOfOverdoseLessThenFourHours = new Question(string("The following recommendations are for acetaminophen poisoned patients where the known time ")
+        Question *timeOfOverdoseLessThenFourHours = new Question(a + b + "The following recommendations are for acetaminophen poisoned patients where the known time "
                                                                  + "of overdose is less than four hours ago.  No blood samples should be taken until 4 hours "
                                                                  + "after overdose.\n\n" + bloodSampleSuggestions() + "\n\n"
                                                                  + calculateAcetylcysteine() + "\n\n"
                                                                  + calculateActivatedCharcoal());
         prompts.insert(strQuestionMapPair("timeOfOverdoseLessThenFourHours", timeOfOverdoseLessThenFourHours));
         
-        Question *timeOfOverdoseMoreThenTwentyFourHours = new Question(string("Though little benefit is seen with acetylcysteine treatment ")
+        Question *timeOfOverdoseMoreThenTwentyFourHours = new Question(a + b + "Though little benefit is seen with acetylcysteine treatment "
                                                                        + "more than 24 hours after acetaminophen overdose, it is recommended "
                                                                        + "that acetylcysteine therapy be administered regardless of the minimal "
                                                                        + "potential benefit.\n\n"
@@ -70,7 +69,7 @@ namespace libAntidote {
         Question *bloodsampleTakenGreaterThenFourHours = new Question(calculateAcetylcysteine() + " "+ bloodSampleSuggestions());
         prompts.insert(strQuestionMapPair("bloodsampleTakenGreaterThenFourHours", bloodsampleTakenGreaterThenFourHours));
         
-        Question *bloodsampleTakenLessThenFourHours = new Question(string("The following recommendations are for acetaminophen poisoned patients ")
+        Question *bloodsampleTakenLessThenFourHours = new Question(a + b + "The following recommendations are for acetaminophen poisoned patients "
                                                                    + "where the known time of overdose is between 4 and 24 hours ago.\n\n"
                                                                    + "If the acetaminophen blood level is known and the sample was taken "
                                                                    + "at least 4 hours after the time of overdose, you will be given the option "
@@ -90,7 +89,7 @@ namespace libAntidote {
         bloodPlasmaLevel->setType("numbers", "microgram/ml");
         prompts.insert(strQuestionMapPair("bloodPlasmaLevel", bloodPlasmaLevel));
         
-        Question *bloodSampleMustTakenFourHoursAfterOverdose = new Question("Blood sample must be taken four hours or more after acetaminophen overdose to determine toxicity.");
+        Question *bloodSampleMustTakenFourHoursAfterOverdose = new Question(a + b + "Blood sample must be taken four hours or more after acetaminophen overdose to determine toxicity.");
         prompts.insert(strQuestionMapPair("bloodSampleMustTakenFourHoursAfterOverdose", bloodSampleMustTakenFourHoursAfterOverdose));
         
         
@@ -239,8 +238,7 @@ namespace libAntidote {
     }
     
     string Acetylcysteine::getRef() {
-        return string("References for Acetylcysteine Algorithm|\n\n")
-        + "Humco. (2013, August 1). Activated charcoal powder for oral solution product label.  "
+        return string("Humco. (2013, August 1). Activated charcoal powder for oral solution product label. ")
         + "Activated charcoal powder for oral solution. Texarkana, Texas, U.S.\n\n"
         + "Cumberland Pharmaceuticals. (2013, June 1). Acetadote (N-acetylcysteine) injection.  "
         + "Acetadote package insert. Nashville, Tennessee, U.S.: Cumberland Pharmaceuticals.\n\n"

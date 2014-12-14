@@ -14,7 +14,7 @@ namespace libAntidote {
     
     Deferoxamine::Deferoxamine(double age, double height, double weight) : Antidote(age, height, weight) {
         string a = "Deferoxamine (iron toxicity) Antidote Algorithm ",
-        b = "For the treatement of acute iron toxicity.\n\n",
+        b = string("For the treatment of acute iron toxicity.  ") + FDA + "\n\n",
         c = "\n (Mills KC, 1994) (Anderson, 1994) (Novartis, 2011)";
         insertToMap("ageLessThanThree", new Question(a + b + "Safety and effectiveness in pediatric patients under the age of " +
                                                      "3 years have not been established." + c));
@@ -106,7 +106,7 @@ namespace libAntidote {
         return string("References for Deferoxamine Algorithm\n\n")+
                       "Mills KC, C. S. (1994). Acute iron poisoning. Emerg Med Clin North Am , 12, 397-413.\n\n" +
                       "Anderson, A. (1994). Iron poisoning in children. Curr Opin Pediatr , 6, 289-294.\n\n" +
-                      "Novartis. (2011, December 1) Desferal� deferoxamine mesylate for injection USP. Package Insert.\n" +
+                      "Novartis. (2011, December 1) Desferal(R) deferoxamine mesylate for injection USP. Package Insert.\n" +
                       "East Hanover, New Jersey, U.S.: Novartis.";
     }
 }

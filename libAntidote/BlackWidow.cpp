@@ -14,7 +14,7 @@ namespace libAntidote {
     
     BlackWidow::BlackWidow(double age, double height, double weight) : Antidote(age, height, weight) {
         string a = "Black Widow envenomation Algorithm.\n",
-        b = "For the treatement of Black Widow (Latrodectus mactans) envenomation.\n\n",
+        b = string("For the treatment of Black Widow (Latrodectus mactans) envenomation.  ") + FDA + "\n\n",
         c = "\n(Merck & Co., Inc. , 2014)";
         
         string stringSystemicReaction = string(" As with any administration of serum products, support for ") +
@@ -131,8 +131,7 @@ namespace libAntidote {
     
     
     string BlackWidow::getRef() {
-        return string("References for Black Widow Antitoxin Algorithm\n\n") +
-        "Merck & Co., Inc.(2014, February 1). ANTIVENIN (LATRODECTUS MACTANS) " +
+        return string("Merck & Co., Inc.(2014, February 1). ANTIVENIN (LATRODECTUS MACTANS) ") +
         "(Black Widow Spider Antivenin) Equine Origin Package Insert. " +
         "Whitehouse Station, New Jersey, U.S.: Merck & Co., Inc. ";
     }

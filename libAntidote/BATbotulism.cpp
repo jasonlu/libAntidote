@@ -14,7 +14,7 @@ namespace libAntidote {
     
     BATbotulism::BATbotulism(double age, double height, double weight) : Antidote(age, height, weight) {
         string a = "Botulism Antitoxin(BAT) - ",
-        b = "For the treatement of botulism toxin exposure.\n\n",
+        b = string("For the treatment of botulism toxin exposure.  ") + FDA + "\n\n",
         c = "\n(Cangene Corporation, 2013)";
         
         //Infant Dosing

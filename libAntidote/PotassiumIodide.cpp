@@ -17,8 +17,8 @@ namespace libAntidote {
         b = string("For the treatment of radioactive I-131 exposure.  ")+FDA+"\n\n",
         c = "";//getRef();
         Question* potContra = new Question(a+b+
-        "Contraindicated in patients that are hypersensitive to Iodide, \n" +
-        "iodine; dermatitis herpetiformis; hypocomplementemic vasculitis; \n" +
+        "Contraindicated in patients that are hypersensitive to Iodide, " +
+        "iodine; dermatitis herpetiformis; hypocomplementemic vasculitis; " +
         "nodular thyroid condition with heart disease."+c);
         potContra->setType("warning");
         insertToMap("potContra", potContra);
@@ -28,42 +28,42 @@ namespace libAntidote {
         insertToMap("isPregnant", isPregnant);
         
         string potInfant = a+b+
-        "Administer 16.5mg potassium iodide PO daily for patients with thyroid exposure\n" +
+        "Administer 16.5mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than or equal to 5 cGy."+c;
         insertToMap("potInfant", potInfant);
         
         string potToddler = a+b+
-        "Administer 32.5 mg potassium iodide PO daily for patients with thyroid exposure \n" +
+        "Administer 32.5 mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than or equal to 5 cGy."+c;
         insertToMap("potToddler", potToddler);
         
         string potPregnant = a+b+
-        "Administer 130 mg potassium iodide PO Daily for any pregnant or breast-feeding \n" +
+        "Administer 130 mg potassium iodide PO Daily for any pregnant or breast-feeding " +
         "female with thyroid exposure greater than or equal to 5 cGy"+c;
         insertToMap("potPregnant", potPregnant);
         
         string potChild = a+b+
-        "Administer 65 mg potassium iodide PO daily for patients with thyroid exposure \n" +
+        "Administer 65 mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than 5 cGy."+c;
         insertToMap("potChild", potChild);
         
         string potLessThan68 = a+b+
-        "Administer 65 mg potassium iodide PO daily for patients with thyroid exposure \n" +
+        "Administer 65 mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than or equal to 5 cGy."+c;
         insertToMap("potLessThan68", potLessThan68);
         
         string pot68AndGreater = a+b+
-        "Administer 130 mg potassium iodide PO daily for patients with thyroid exposure \n" +
+        "Administer 130 mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than or equal to 5 cGy."+c;
         insertToMap("pot68AndGreater", pot68AndGreater);
         
         string potAdultUnder40 = a+b+
-        "Administer 130 mg potassium iodide PO daily for patients with thyroid exposure \n" +
+        "Administer 130 mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than or equal to 10 cGy."+c;
         insertToMap("potAdultUnder40", potAdultUnder40);
         
         string potAdultOver40 = a+b+
-        "Administer 130 mg potassium iodide PO daily for patients with thyroid exposure \n" +
+        "Administer 130 mg potassium iodide PO daily for patients with thyroid exposure " +
         "greater than or equal to 500 cGy."+c;
         insertToMap("potAdultOver40", potAdultOver40);
     }
@@ -123,9 +123,8 @@ namespace libAntidote {
     
     
     string PotassiumIodide::getRef() {
-        return string("\n\nReferences for Potassium Iodide Algorithm: \n\n") +
-        "REMM. (2012, January 1). Radiation Countermeasures for Treatment of \n" +
-        "Internal Contamination. Retrieved May 27, 2014, from Radiation \n" +
+        return string("REMM. (2012, January 1). Radiation Countermeasures for Treatment of ") +
+        "Internal Contamination. Retrieved May 27, 2014, from Radiation " +
         "Emergency Medical Management";
     }
 }

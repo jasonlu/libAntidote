@@ -14,7 +14,8 @@ namespace libAntidote {
     
     CrotalidaeOvine::CrotalidaeOvine(double age, double height, double weight) : Antidote(age, height, weight) {
         
-        string a = "Crotalidae or pit viper envenomation", b = "For the treatment of Crotalidae or pit viper envenomation.",
+        string a = "Crotalidae (pit viper) Antivenin Algorithm\n",
+        b = string("For the treatment of Crotalidae or pit viper envenomation.  ") + FDA + "\n\n",
         c = " (Protherics Inc., 2008)";
 
         string stringInfantsChildren = b + " Dosing for infants and children:\n\n" +
@@ -86,8 +87,7 @@ namespace libAntidote {
     
     
     string CrotalidaeOvine::getRef() {
-        return string("References for Rattlesnake Antivenin Algorithm\n\n") +
-        "Protherics Inc.(2008, June 1) CROFAB� CROTALIDAE POLYVALENT IMMUNE FAB (OVINE).   " +
+        return string("Protherics Inc.(2008, June 1) CROFAB(R) CROTALIDAE POLYVALENT IMMUNE FAB (OVINE).  ") +
         "Package Insert . Brentwood, Tennessee, U.S.";
     }
 }

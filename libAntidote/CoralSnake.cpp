@@ -15,10 +15,10 @@ namespace libAntidote {
     CoralSnake::CoralSnake(double age, double height, double weight) : Antidote(age, height, weight) {
         
         string a = "Coral Snake Envenomation Algorithm. ",
-        b = string("For the treatement of Coral Snake (Micrurus fulvius) envenomation. ") +
-        "Effective against all North American Coral Snake envenomation except " +
-        "Arizona(sonoran) coral snake. ",
-        c = " (Wyeth� , 2001)";
+        b = string("For the treatment of Coral Snake (Micrurus fulvius) envenomation.  ") + FDA + "\n" +
+        "Effective against all North American Coral Snake envenomation except Arizona(sonoran) coral snake.\n\n",
+        c = "\n(Wyeth(R) , 2001)";
+        
         string stringSystemicReaction = string("Systemic Reaction: ") +
         "If a systemic reaction occurs after any injection, place a tourniquet  " +
         "proximal to the site of injections and administer an appropriate dose  " +
@@ -28,7 +28,7 @@ namespace libAntidote {
         string stringSkinTest = string("Skin Test: This product is an equine (horse) derivative. ") +
         "Patients allergic to equine products may have a severe reaction. " +
         "It is recommended that you perform a sensitivity test before proceeding\n\n" +
-        "Using a tuberculin-type syringe, inject 0.02�0.03 ml of a 1:10 dilution  " +
+        "Using a tuberculin-type syringe, inject 0.02-0.03 ml of a 1:10 dilution  " +
         "(1:100 for patients with history of equine sensitivity)of Antivenin  " +
         "intradermally. Perform a control test with NS on the opposite " +
         "side of the body as a control.  If there is any (even if very mild) reaction " +
@@ -94,7 +94,7 @@ namespace libAntidote {
         prompts.insert(strQuestionMapPair("AlgorithmMessage", AlgorithmMessage));
 
         //Systemic reaction warning
-        Question *SystemicReactionWarning = new Question(stringSystemicReaction);
+        Question *SystemicReactionWarning = new Question(a + b + stringSystemicReaction);
         SystemicReactionWarning->setType("warning");
         prompts.insert(strQuestionMapPair("SystemicReactionWarning", SystemicReactionWarning));
 
@@ -125,23 +125,23 @@ namespace libAntidote {
         prompts.insert(strQuestionMapPair("IVOrIM", IVOrIM));
         
         //End nodes:
-        Question *InfantIVDose = new Question(stringInfant + stringChildren + stringIVDoseChildren);
+        Question *InfantIVDose = new Question(a + b +stringInfant + stringChildren + stringIVDoseChildren);
         prompts.insert(strQuestionMapPair("InfantIVDose", InfantIVDose));
-        Question *InfantDesensitization = new Question(stringInfant + stringChildren + stringDesensitizationChildren);
+        Question *InfantDesensitization = new Question(a + b + stringInfant + stringChildren + stringDesensitizationChildren);
         prompts.insert(strQuestionMapPair("InfantDesensitization", InfantDesensitization));
         
-        Question *ChildrenIVDose = new Question(stringChildren + stringIVDoseChildren);
+        Question *ChildrenIVDose = new Question(a + b + stringChildren + stringIVDoseChildren);
         prompts.insert(strQuestionMapPair("ChildrenIVDose", ChildrenIVDose));
-        Question *ChildrenIMDose = new Question(stringChildren + stringIMDose);
+        Question *ChildrenIMDose = new Question(a + b + stringChildren + stringIMDose);
         prompts.insert(strQuestionMapPair("ChildrenIMDose", ChildrenIMDose));
-        Question *ChildrenDesensitization = new Question(stringChildren + stringDesensitizationChildren);
+        Question *ChildrenDesensitization = new Question(a + b + stringChildren + stringDesensitizationChildren);
         prompts.insert(strQuestionMapPair("ChildrenDesensitization", ChildrenDesensitization));
         
-        Question *AdultIVDose = new Question(stringAdult + stringIVDose);
+        Question *AdultIVDose = new Question(a + b + stringAdult + stringIVDose);
         prompts.insert(strQuestionMapPair("AdultIVDose", AdultIVDose));
-        Question *AdultIMDose = new Question(stringAdult + stringIMDose);
+        Question *AdultIMDose = new Question(a + b + stringAdult + stringIMDose);
         prompts.insert(strQuestionMapPair("AdultIMDose", AdultIMDose));
-        Question *AdultDesensitization = new Question(stringAdult + stringDesensitization);
+        Question *AdultDesensitization = new Question(a + b + stringAdult + stringDesensitization);
         prompts.insert(strQuestionMapPair("AdultDesensitization", AdultDesensitization));
         
     }
@@ -221,9 +221,7 @@ namespace libAntidote {
     
     
     string CoralSnake::getRef() {
-        return string("References for North American Coral Snake Antivenin Algorithm\n\n") +
-        "Wyeth� . (2001, August 31). Antivenin (Micrurus fulvius) (Equine Origin) "+
-        "North American Coral Snake Antivenin . Package Insert . Marietta, Pennsylvania, "+
-        "U.S.: Wyeth�.";
+        return string("Wyeth(R) . (2001, August 31). Antivenin (Micrurus fulvius) (Equine Origin) ")+
+        "North American Coral Snake Antivenin . Package Insert . Marietta, Pennsylvania, U.S.: Wyeth(R).";
     }
 }

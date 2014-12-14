@@ -23,7 +23,7 @@ namespace libAntidote {
         insertToMap("nitrateQ", nitrateQ);
         
         string metBlueNeo = a + b + "Use with caution in infants. Methylene blue an worsen methemoglobinemia paradoxically in infants.\n\n" +
-            "Administer "+toStr( weightkg*0.3)+"-"+toStr( weightkg*1)+" mg (0.3-1 mg/kg) of methylene blue slow IVP\n" +
+            "Administer "+toStr( weightkg*0.3)+"-"+toStr( weightkg*1)+" mg (0.3-1 mg/kg) of methylene blue slow IVP " +
             "over 3-5 minutes and flush line.  " + c;
         insertToMap("metBlueNeo", metBlueNeo);
         
@@ -69,13 +69,12 @@ namespace libAntidote {
     
     
     string MetBlue::getRef() {
-        return string("\n\nReferences for Methylene Blue Algorithm: \n\n") +
-        "Akorn, Inc. (2008, August 1). METHYLENE BLUE. Package Insert. \n" +
+        return string("Akorn, Inc. (2008, August 1). METHYLENE BLUE. Package Insert. \n") +
         "Lake Forest, Ill, U.S.: Akorn, Inc.\n\n" +
-        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart. \n" +
+        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart. " +
         "Kansas City, Kansas, U.S.: Thomas Land Publishers, Inc.\n\n" +
-        "Hjelt, K., Lund, J., Scherling, B., Bendixen, S., Lundstram, K., \n" +
-        "Stovring, S., et al. (1995). Methaemoglobinaemia among neonates in \n" +
+        "Hjelt, K., Lund, J., Scherling, B., Bendixen, S., Lundstram, K., " +
+        "Stovring, S., et al. (1995). Methaemoglobinaemia among neonates in " +
         "a neonatal intensive care unit. Acta Paediatrica , 84 (4), 365-370.";
     }
 }

@@ -18,31 +18,31 @@ namespace libAntidote {
         c = "";//getRef();
         
         string fomeWarn = a+b+
-        "Antizol�(fomepizole) should not be given undiluted or \n" +
-        "by bolus injection.  All doses should be administered \n" +
+        "Antizol(R)(fomepizole) should not be given undiluted or " +
+        "by bolus injection.  All doses should be administered " +
         "as a slow intravenous infusion over 30 minutes";
         insertToMap("fomeWarn", fomeWarn);
         
         string noFome = a+b+
-        "Do not administer fomepizole.  Fomepizole treatment is not indicated in patients\n" +
-        "with serum concentrations of methanol or ethylene glycol below 20mg/dL.  Monitor \n" +
+        "Do not administer fomepizole.  Fomepizole treatment is not indicated in patients " +
+        "with serum concentrations of methanol or ethylene glycol below 20mg/dL.  Monitor " +
         "serum concentrations and symptoms.";
         insertToMap("noFome", noFome);
         
         string fomeDose = a+b+
-        "A loading dose of "+toStr( weightkg*15)+" mg (15 mg/kg) fomepizole should be administered, \n" +
-        "followed by doses of "+toStr( weightkg*10)+" mg (10 mg/kg) every 12 hours for 4 doses, then \n" +
-        toStr( weightkg*15)+" mg (15 mg/kg) every 12 hours thereafter until ethylene glycol or methanol \n" +
+        "A loading dose of "+toStr( weightkg*15)+" mg (15 mg/kg) fomepizole should be administered, " +
+        "followed by doses of "+toStr( weightkg*10)+" mg (10 mg/kg) every 12 hours for 4 doses, then " +
+        toStr( weightkg*15)+" mg (15 mg/kg) every 12 hours thereafter until ethylene glycol or methanol " +
         "concentrations are undetectable or have been reduced below 20 mg/dL, \n" +
         "and the patient is asymptomatic with normal pH."+c;
         insertToMap("fomeDose", fomeDose);
         
         string fomeDialysis = a+b+
         "Consider including dialysis to lower concentrations to <50mg/dL.\n\n" +
-        "A loading dose of "+toStr( weightkg*15)+" mg (15 mg/kg) fomepizole should be administered, \n" +
-        "followed by doses of "+toStr( weightkg*10)+" mg (10 mg/kg) every 4 hours for 4 doses, then \n" +
-        toStr( weightkg*15)+" mg (15 mg/kg) every 4 hours thereafter until ethylene glycol or methanol \n" +
-        "concentrations are undetectable or have been reduced below 20 mg/dL, \n" +
+        "A loading dose of "+toStr( weightkg*15)+" mg (15 mg/kg) fomepizole should be administered, " +
+        "followed by doses of "+toStr( weightkg*10)+" mg (10 mg/kg) every 4 hours for 4 doses, then " +
+        toStr( weightkg*15)+" mg (15 mg/kg) every 4 hours thereafter until ethylene glycol or methanol " +
+        "concentrations are undetectable or have been reduced below 20 mg/dL, " +
         "and the patient is asymptomatic with normal pH."+c;
         insertToMap("fomeDialysis", fomeDialysis);
         
@@ -52,7 +52,7 @@ namespace libAntidote {
         insertToMap("isGlycolKnown", isGlycolKnown);
         
         Question *enterConcentration = new Question("Please enter methanol or ethylene glycol serum \nconcentration in mg/dL.");
-        enterConcentration->setType("numbers");
+        enterConcentration->setType("numbers", "mg/dL");
         insertToMap("enterConcentration", enterConcentration);
         
         
@@ -89,7 +89,6 @@ namespace libAntidote {
     
     
     string Fomepizole::getRef() {
-        return string("\n\nReferences for Fomepizole Algorithm: \n\n") +
-        "Paladin Labs (USA) Inc. (2009, April 1). ANTIZOL- fomepizole injection.\n" +
+        return string("Paladin Labs (USA) Inc. (2009, April 1). ANTIZOL- fomepizole injection.\n") +
         "Dover, Delaware, U.S.: Paladin Labs (USA) Inc.";    }
 }

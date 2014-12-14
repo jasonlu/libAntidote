@@ -18,43 +18,43 @@ namespace libAntidote {
         c = "";//getRef();
         Question* strEncephalopathy = new Question(a + b + "Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg)IM for first dose followed by " +
                                                    toStr(weightkg*4)+"mg\n" +
-                                                   "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of \n" +
+                                                   "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of " +
                                                    "Dimercaprol, administer Ca-EDTA "+toStr(calcAdultEncED())+
-                                                   "mg per day (1500mg/m^2/day max 3000mg/day) in 500ml (adults)\n" +
+                                                   "mg per day (1500mg/m^2/day max 3000mg/day) in 500ml (adults) " +
                                                    "of D5W or NS via IVCI for up to 5 days or until acceptable blood levels achieved." + c);
         insertToMap("strEncephalopathy", strEncephalopathy);
         
-        Question* strEncPed = new Question(a + b + "Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg) IM for first dose followed by " +toStr(weightkg*4)+"mg\n" +
-                                           "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of \n" +
-                                           "Dimercaprol, administer Ca-EDTA "+toStr(calcPedEncED())+"mg per day (1500mg/m^2/day max 1000mg/day) in D5W or NS\n" +
-                                           "(adjust total volume for pediatric dosing) via IVCI for up to 5 days or until \n" +
+        Question* strEncPed = new Question(a + b + "Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg) IM for first dose followed by " +toStr(weightkg*4)+"mg " +
+                                           "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of " +
+                                           "Dimercaprol, administer Ca-EDTA "+toStr(calcPedEncED())+"mg per day (1500mg/m^2/day max 1000mg/day) in D5W or NS " +
+                                           "(adjust total volume for pediatric dosing) via IVCI for up to 5 days or until " +
                                            "acceptable blood levels achieved." + c);
         insertToMap("strEncPed", strEncPed);
         
-        Question* strOver70 = new Question("Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg) IM for first dose followed by " +toStr(weightkg*4)+"mg\n" +
-                                           "(4mg/kg)every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of \n" +
-                                           "Dimercaprol, administer Ca-EDTA "+toStr(calcAdultED())+"mg per day (1000mg/m^2/day max 3000mg/day) in 500ml (adults)\n" +
+        Question* strOver70 = new Question("Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg) IM for first dose followed by " +toStr(weightkg*4)+"mg " +
+                                           "(4mg/kg)every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of " +
+                                           "Dimercaprol, administer Ca-EDTA "+toStr(calcAdultED())+"mg per day (1000mg/m^2/day max 3000mg/day) in 500ml (adults) " +
                                            "of D5W or NS  via IVCI for up to 5 days or until acceptable blood levels achieved.");
         insertToMap("strOver70", strOver70);
         
-        Question* strOver70Ped = new Question(a + b + "Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg) IM for first dose followed by " +toStr(weightkg*4)+"mg\n" +
-                                              "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of \n" +
-                                              "Dimercaprol, administer Ca-EDTA "+toStr(calcPedED())+"mg per day (1000mg/m^2/day max 1000mg/day) in of D5W or NS \n" +
-                                              "(adjust total volume for pediatric dosing) via IVCI for up to 5 days or until acceptable\n" +
+        Question* strOver70Ped = new Question(a + b + "Administer Dimercaprol "+toStr(weightkg*4)+"mg (4mg/kg) IM for first dose followed by " +toStr(weightkg*4)+"mg " +
+                                              "(4mg/kg) every 4 hours until acceptable blood levels acheived (up to 5days).  After first dose of " +
+                                              "Dimercaprol, administer Ca-EDTA "+toStr(calcPedED())+"mg per day (1000mg/m^2/day max 1000mg/day) in of D5W or NS " +
+                                              "(adjust total volume for pediatric dosing) via IVCI for up to 5 days or until acceptable " +
                                               "blood levels achieved." + c);
         insertToMap("strOver70Ped", strOver70Ped);
         
-        Question* strBetween45and70 = new Question(a + b + "Administer Ca-EDTA "+toStr(calcPedED())+"mg per day (1000mg/m^2/day max 1000mg/day) in D5W or NS \n" +
+        Question* strBetween45and70 = new Question(a + b + "Administer Ca-EDTA "+toStr(calcPedED())+"mg per day (1000mg/m^2/day max 1000mg/day) in D5W or NS " +
                                                    "(adjust total volume for pediatric dosing) via IVCI for up to 5 days or " +
                                                    "until acceptable blood levels achieved." + c);
         insertToMap("strBetween45and70", strBetween45and70);
         
-        Question* strNoTx = new Question(a + b + "Pharmaceutical intervention is not indicated adult patients with Pb levels\n" +
+        Question* strNoTx = new Question(a + b + "Pharmaceutical intervention is not indicated adult patients with Pb levels " +
                                          "less than 70mcg/dl.\n" +
                                          "Please contact Poison Control for further guidance at 1-800-222-1222.\n" + c);
         insertToMap("strNoTx", strNoTx);
         
-        Question* strNoTx45 = new Question(a + b + "Pharmaceutical intervention is not indicated patients \n" +
+        Question* strNoTx45 = new Question(a + b + "Pharmaceutical intervention is not indicated patients " +
                                            "with Pb levels less than 45mcg/dl.\n" +
                                            "Please contact Poison Control for further guidance at 1-800-222-1222.\n" + c);
         insertToMap("strNoTx45", strNoTx45);
@@ -152,8 +152,7 @@ namespace libAntidote {
     
     
     string EdtaDimercaprol::getRef() {
-        return string("\n\nReferences for EDTA/Dimercaprol (lead toxicity) Algorithm: \n\n") +
-        "King, A. R. (2012, January 1). Antidote Chart. Antidote Chart . Kansas City," +
+        return string("King, A. R. (2012, January 1). Antidote Chart. Antidote Chart . Kansas City,") +
         "Kansas, U.S.: Thomas Land Publishers, Inc.\n\n" +
         "Goldfrank, L.R., Flomenbaum, N.E., Lewin, N.A., Howland, M.A., Nelson," +
         "L. S., & Hoffman,R. S. (2007). Goldfrank's Manual of Toxicologic Emergencies." +

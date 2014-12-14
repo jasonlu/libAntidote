@@ -15,7 +15,7 @@ namespace libAntidote {
     CaDTPA::CaDTPA(double age, double height, double weight) : Antidote(age, height, weight) {
         
         string a = "Ca-DTPA/Zn-DTPA Algorithm  ",
-        b = "For the treatement of plutonium, americium, and curium exposure/toxicity.\n\n",
+        b = string("For the treatment of plutonium, americium, and curium exposure/toxicity.  ") + FDA + "\n\n",
         c = " (Akorn Inc., 2005)";
         string input;
         string stringAdultCaD = a + b + "Adult Dosing:\n\n"  +
@@ -59,8 +59,7 @@ namespace libAntidote {
     
     
     string CaDTPA::getRef() {
-        return string("References Calcium/Zinc DTPA Algorithm\n\n")  +
-                      "Akorn Inc. (2005, January 1). Pentetate Trisodium Calcium Injection. Pentetate  "  +
+        return string("Akorn Inc. (2005, January 1). Pentetate Trisodium Calcium Injection. Pentetate  ")  +
                       "Trisodium Calcium Injection (package insert) . Buffalo Grove, ILL, U.S.: Akorn Inc.";
     }
 }

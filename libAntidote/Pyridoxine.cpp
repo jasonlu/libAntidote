@@ -20,17 +20,17 @@ namespace libAntidote {
         c = "";//getRef();
         
         string childUnknown = ""+a+b+
-        "Administer "+toStr(weightkg*70)+" mg (70mg/kg, max 5000 mg) at a \n" +
+        "Administer "+toStr(weightkg*70)+" mg (70mg/kg, max 5000 mg) at a " +
         "rate of 500-1000 mg/minute may repeat dose Q5-10 minutes as needed to control seizure."+c;
         insertToMap("childUnknown", childUnknown);
         
         string adultUnknown = ""+a+b+
-        "Administer 5000mg IV at a rate of 500-1000mg/min.  May repeat Q5-10min as needed to\n" +
+        "Administer 5000mg IV at a rate of 500-1000mg/min.  May repeat Q5-10min as needed to " +
         "control seizures."+c;
         insertToMap("adultUnknown", adultUnknown);
         
         string hydrazines = ""+a+b+
-        "Administer "+toStr(weightkg*25)+" mg IV (25mg/kg in children and adults ) \n" +
+        "Administer "+toStr(weightkg*25)+" mg IV (25mg/kg in children and adults ) " +
         "over 15-30min.  May repeat dose as necessary to control seizures (max 15g/day) "+c;
         insertToMap("hydrazines", hydrazines);
         
@@ -93,12 +93,12 @@ namespace libAntidote {
     
     string Pyridoxine::pyrAdultKnown(double dose){
         if(dose>5000){
-            return string("Administer doses of 5000 mg pyridoxine IV at a rate of 500-1000 mg/minute\n") +
+            return string("Administer doses of 5000 mg pyridoxine IV at a rate of 500-1000 mg/minute ") +
             "every 5-10 minutes to control seizures.  Do not exceed a total dose of "+toStr(dose)+" mg.\n" +
-            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose\n" +
+            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose " +
             "may be given via IV infusion over 4-6 hours";
         } else {
-            return string("Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in\n") +
+            return string("Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in ") +
             "multiple divided doses.";
         }
     }
@@ -107,27 +107,27 @@ namespace libAntidote {
         
         if(dose>weightkg*70){
             return
-            "Administer doses of "+toStr(weightkg*70)+" mg pyridoxine IV at a rate of 500-1000 mg/minute\n" +
+            "Administer doses of "+toStr(weightkg*70)+" mg pyridoxine IV at a rate of 500-1000 mg/minute " +
             "every 5-10 minutes to control seizures.  Do not exceed a total dose of "+toStr(dose)+" mg.\n" +
-            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose\n" +
+            "If seizures subside before total dose of "+toStr(dose)+" mg is given, remainder of dose " +
             "may be given via IV infusion over 4-6 hours";
         }else {
             return
-            "Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in\n" +
+            "Give a total dose of "+toStr(dose)+" mg pyridoxine IV in one single dose or in " +
             "multiple divided doses.";
         }
     }
     
     
     string Pyridoxine::getRef() {
-        return string("\n\nReferences for Pyridoxine Algorithm: \n\n") +
-                      "APP Pharmaceuticals, LLC . (2011, August 1).PYRIDOXINE \n" +
-                      "HYDROCHLORIDE . Package Insert . Schaumburg,IL, U.S. \n" +
+        return string("") +
+                      "APP Pharmaceuticals, LLC . (2011, August 1).PYRIDOXINE " +
+                      "HYDROCHLORIDE . Package Insert . Schaumburg,IL, U.S. " +
                       "APP Pharmaceuticals, LLC .\n\n" +
-                      "Goldfrank, LR; Flomenbaum, NE; Lewin, NA; Howland, MA;\n" +
-                      "Nelson, LS, & Hoffman R S (2007). Goldfrank's Manual of \n" +
+                      "Goldfrank, LR; Flomenbaum, NE; Lewin, NA; Howland, MA;" +
+                      "Nelson, LS, & Hoffman R S (2007). Goldfrank's Manual of " +
                       "Toxicologic Emergencies. New York, NY , U.S: McGraw Hill .\n\n" +
-                      "King, A. R. (2012, January 1). Antidote Chart. Antidote \n" +
+                      "King, A. R. (2012, January 1). Antidote Chart. Antidote " +
                       "Chart. Kansas City, Kansas, U.S.: Thomas Land Publishers, Inc.";
     }
 }

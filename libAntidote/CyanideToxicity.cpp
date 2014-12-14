@@ -15,47 +15,49 @@ namespace libAntidote {
     CyanideToxicity::CyanideToxicity(double age, double height, double weight) : Antidote(age, height, weight) {
         
         
-        string strCyanideAlgorithmWarning1 = string("Hydroxocobalamin is considered first line treatment for cyanaide toxicity. ") +
-        "Amyl nitrite and sodium nitrite are no longer available on the U.S. market. " +
-        "Sodium thiosulfate is included in this algorithm as second line therapy. " +
-        "Amyl nitrite and sodium nitrite dosing are also included as an adjunct agent " +
-        "for international users of this program.";
+        string strCyanideAlgorithmWarning1 = string("Hydroxocobalamin is considered first line treatment for cyanaide toxicity.\n") +
+                                                    "Amyl nitrite and sodium nitrite are no longer available on the U.S. market.\n" +
+                                                    "Sodium thiosulfate is included in this algorithm as second line therapy.\n" +
+                                                    "Amyl nitrite and sodium nitrite dosing are also included as an adjunct agent " +
+                                                    "for international users of this program.";
+        
         string strCyanideAlgorithmWarning2 = string("Warning: In addition to hydroxocobalamin, treatment of cyanide toxicity must ") +
-        "include aggressive supportive care and immediate attention to airway patency, " +
-        "adequacy of oxygenation and hydration, cardiovascular support, and management of " +
-        "any seizure activity. Consideration should be given to decontamination measures " +
-        "based on the route of exposure. It is important to start treatment early in patients " +
-        "with cyanide poisoning; thus, hydroxocobalamin therapy should be initiated prior to " +
-        "obtaining cyanide blood assay results. " +
-        "Cyanokit (hydroxocobalamin) package insert. " +
-        "Columbia, MD: Meridian Medical Technologies, Inc.; 2011 Apr";
+                                                    "include aggressive supportive care and immediate attention to airway patency, " +
+                                                    "adequacy of oxygenation and hydration, cardiovascular support, and management of " +
+                                                    "any seizure activity. Consideration should be given to decontamination measures " +
+                                                    "based on the route of exposure. It is important to start treatment early in patients " +
+                                                    "with cyanide poisoning; thus, hydroxocobalamin therapy should be initiated prior to " +
+                                                    "obtaining cyanide blood assay results.\n" +
+                                                    "Cyanokit (hydroxocobalamin) package insert.\n" +
+                                                    "Columbia, MD: Meridian Medical Technologies, Inc.; 2011 Apr";
+        string a = "Hydroxocobalamin and Cyanide Antidote Package Algorithm.\n";
         
-        string strAgeLessthanOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n") +
-        "First Line Therapy - hydroxocobalamin " +
-        "Neonates and Infants: Safety and efficacy have not been established.\n\n" +
-        "Cyanokit (hydroxocobalamin) package insert. Please contact a Neonatologist immediately. " +
-        "Columbia, MD: Meridian Medical Technologies, Inc.; 2011 Apr\n\n" +
-        "***Cyanide Antidote Package (amyl nitrite, sodium nitrite, sodium thiosulfate)" +
-        "is no longer available in the U.S.*** " +
-        "Safety and efficacy in newborns and infants has not been established." ;
+        string strAgeLessthanOne = a + "\n"+
+                                   "For the treatment of known or suspected cyanide toxicity or poisoning.  " + FDA + "\n\n"+
+                                   "First Line Therapy - hydroxocobalamin\n" +
+                                   "Neonates and Infants: Safety and efficacy have not been established.\n\n" +
+                                   "Cyanokit (hydroxocobalamin) package insert. Please contact a Neonatologist immediately.\n" +
+                                   "Columbia, MD: Meridian Medical Technologies, Inc.; 2011 Apr\n\n" +
+                                   "***Cyanide Antidote Package (amyl nitrite, sodium nitrite, sodium thiosulfate)" +
+                                   "is no longer available in the U.S.***";
         
-        string strAgeBetweenOneAndTwentyOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n")+
+        string strAgeBetweenOneAndTwentyOne = a + "\n" + "For the treatment of known or suspected cyanide toxicity or poisoning.  "+FDA+"\n\n"+
         "First Line Therapy - hydroxocobalamin " +
         "Intravenous infusion dosage of hydroxocobalamin: " +
-        "Children� and Adolescents�: Safety and efficacy have not been established; however, " +
+        "Children* and Adolescents*: Safety and efficacy have not been established; however, " +
         "70 mg/kg IV has been used in pediatric patients in non-U.S. marketing experience. " +
         "This patient should receive "+calculateHydroxoDose()+"mg IV. " +
         "Pleasecontact a Posion Control and a peditrician for administration of dose.  " +
         "Cyanokit (hydroxocobalamin) package insert.Columbia, MD: Meridian Medical Technologies,  " +
-        "Inc.; 2011 Apr. �Un-approved indication\n\n" +
+        "Inc.; 2011 Apr. *Un-approved indication\n\n" +
         "***Cyanide Antidote Package (amyl nitrite, sodium nitrite, sodium thiosulfate)" +
         "is no longer available in the U.S.*** " +
         "Second line therapy for the management of cyanide toxicity: (amyl nitrite, sodium nitrite, " +
-        "sodium thiosulfate) Children: Break amyl nitrite vial and inhale the contents of 1 ampule (0.18�0.3 mL) " +
-        "for 15�30 seconds.Repeat 1 ampule dose every minute until sodium nitrite IV infusion " +
+        "sodium thiosulfate) Children: Break amyl nitrite vial and inhale the contents of 1 ampule (0.18-0.3 mL) " +
+        "for 15-30 seconds.Repeat 1 ampule dose every minute until sodium nitrite IV infusion " +
         "is available. NOTE: Children should be carefully monitored during treatment with amyl  " +
         "nitrite to avoid formation of excessive methemoglobin; the smallest effective dosage should be used. " +
-        "Sodium Nitrite Intravenous dosage:  Children: 0.15�0.33 ml/kg or 6�8 ml/m2 of a 3% solution. " +
+        "Sodium Nitrite Intravenous dosage:  Children: 0.15-0.33 ml/kg or 6-8 ml/m2 of a 3% solution. " +
         determinePediatricDoseSodiumNitrite()+
         "Do not to exceed 10 ml. Then, immediately administer sodium thiosulfate. " +
         "Sodium thiosulfate Intravenous dosage Children and Adolescents: The usual dosage of sodium  " +
@@ -76,8 +78,8 @@ namespace libAntidote {
         "Columbia, MD: Meridian Medical Technologies, Inc.; 2011 Apr\n\n" +
         "***Cyanide Antidote Package (amyl nitrite, sodium nitrite, sodium thiosulfate)" +
         "is no longer available in the U.S.*** " +
-        "Adults: Break vial and inhale the contents of 1 ampule (0.18�0.3 mL)" +
-        "for 15�30 seconds. Repeat 1 ampule dose every minute until sodium nitrite IV infusion is available. " +
+        "Adults: Break vial and inhale the contents of 1 ampule (0.18-0.3 mL)" +
+        "for 15-30 seconds. Repeat 1 ampule dose every minute until sodium nitrite IV infusion is available. " +
         "Sodium nitrite intravenous dosage: Adults: 300 mg (10 ml of a 3% solution) IV at a rate of 2.5 to 5 ml/minute. " +
         "Sodium thiosulfate Intravenous dosage Adults: " +
         "Whether used alone or in combination with other cyanide antidotes, the usual dosage of sodium thiosulfate " +
@@ -158,11 +160,7 @@ namespace libAntidote {
     }
     
     string CyanideToxicity::getRef() {
-        return string("References for Cyanide Toxicity Algorithm\n\n") +
-        "ABO Pharmaceuticals. (2013, January 1). CYANIDE ANTIDOTE PACKAGE. CYANIDE ANTIDOTE  " +
-        "PACKAGE. San Clemente, California, U.S.: ABO Pharmaceuticals.\n\n" +
-        "Meridian Medical Technologies�, Inc. (2011, April 1). Cyanokit� Package Insert.  " +
-        "Cyanokit� Package Insert . Columbia, Maryland, U.S.: Meridian Medical Technologies�, " +
-        "Inc. ";
+        return string("") + "ABO Pharmaceuticals. (2013, January 1). CYANIDE ANTIDOTE PACKAGE. CYANIDE ANTIDOTE PACKAGE. San Clemente, California, U.S.: ABO Pharmaceuticals.\n" +
+        "Meridian Medical Technologies™ Inc. (2011, April 1). Cyanokit® Package Insert. Cyanokit® Package Insert . Columbia, Maryland, U.S.: Meridian Medical Technologies™ Inc.";
     }
 }

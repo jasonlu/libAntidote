@@ -17,27 +17,26 @@ namespace libAntidote {
         b = string("As a secondary agent for the treatment of sulfonylurea induced hypoglycemia.  ")+FDO+"\n\n",
         c = "";//getRef();
         
-        string octIVCI = string("\n\n") +
-        "In the event of persistent hypoglycemia continuous infusion \n" +
-        "of octreotide titrated to response may be necessary.  Doses up \n" +
-        "to 125 micrograms/hr have been reported in adults.\n";
+        string octIVCI = string("In the event of persistent hypoglycemia continuous infusion ") +
+        "of octreotide titrated to response may be necessary.  Doses up " +
+        "to 125 micrograms/hr have been reported in adults.";
         
         string octUnderSixChild = a+b+
-        "Monitor carefully in ICU with children 6 YO and under as adverse events \n" +
+        "Monitor carefully in ICU with children 6 YO and under as adverse events " +
         "have been reported in this group.\n" +
-        "Administer "+octCalcChild()+" micrograms (1-2 micrograms/kg up to 50 micrograms)\n" +
-        "octreotide SubQ (preferred) or IV every 6-12 hours as necessary based \n" +
+        "Administer "+octCalcChild()+" micrograms (1-2 micrograms/kg up to 50 micrograms) " +
+        "octreotide SubQ (preferred) or IV every 6-12 hours as necessary based " +
         "on SBG levels."+octIVCI+c;
         insertToMap("octUnderSixChild", octUnderSixChild);
         
         string octOverSixChild = a+b+
-        "Administer "+octCalcChild()+" micrograms (1-2 micrograms/kg up to 50 micrograms) \n" +
-        "octreotide SubQ (preferred) or IV every 6-12 hours as necessary based \n" +
+        "Administer "+octCalcChild()+" micrograms (1-2 micrograms/kg up to 50 micrograms) " +
+        "octreotide SubQ (preferred) or IV every 6-12 hours as necessary based " +
         "on SBG levels."+octIVCI+c;
         insertToMap("octOverSixChild", octOverSixChild);
         
         string octAdult = a+b+
-        "Administer 50-100 micrograms octreotide SubQ (preferred) or IV Q6-12hr as necessary\n" +
+        "Administer 50-100 micrograms octreotide SubQ (preferred) or IV Q6-12hr as necessary " +
         "based on SBG levels."+octIVCI+c;
         insertToMap("octAdult", octAdult);
     }
@@ -70,14 +69,13 @@ namespace libAntidote {
     }
     
     string Octreotide::getRef() {
-        return string("\n\nReferences for Octreotide Algorithm: \n\n") +
-        "Klein-Schwartz, P. P. (2010, March 30). Octreotide�s Role in the \n" +
+        return string("Klein-Schwartz, P. P. (2010, March 30). Octreotide(R)s Role in the ") +
         "Management of Sulfonylurea-Induced Hypoglycemia. J. Med. Toxicol., 199-206.\n\n" +
-        "Glatstein, M., Garcia�Bournissen, F., Scolnik, D., & Koren, G. (2010). SULFONYLUREA\n" +
-        "INTOXICATION AT A TERTIARY CARE PAEDIATRIC HOSPITAL. Can J Clin Pharmacol, 17 (1), \n" +
+        "Glatstein, M., Garcia(R)Bournissen, F., Scolnik, D., & Koren, G. (2010). SULFONYLUREA " +
+        "INTOXICATION AT A TERTIARY CARE PAEDIATRIC HOSPITAL. Can J Clin Pharmacol, 17 (1), " +
         "e51-e56.\n\n" +
-        "McLaughlin, S. A., Crandall, C. S., & McKinney, P. E. (2000, August 1). Octreotide: \n" +
-        "An Antidote for Sulfonylurea- Induced Hypoglycemia. ANNALS OF EMERGENCY MEDICINE, \n" +
+        "McLaughlin, S. A., Crandall, C. S., & McKinney, P. E. (2000, August 1). Octreotide: " +
+        "An Antidote for Sulfonylurea- Induced Hypoglycemia. ANNALS OF EMERGENCY MEDICINE, " +
         "133-138.";
     }
 }

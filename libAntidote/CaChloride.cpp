@@ -15,7 +15,7 @@ namespace libAntidote {
     CaChloride::CaChloride(double age, double height, double weight) : Antidote(age, height, weight) {
 
         string a = "Calcium Salts -",
-        b = "For the treatement of calcium channel blocker and fluoride overdose.\n\n",
+        b = string("For the treatment of calcium channel blocker and fluoride overdose. ") + FDO + "\n\n",
         c = "  (Hung YM, 2007) (Haddad, 1996) (Buckley N, 1993) (Sim MT, 2008)  (Kleinman, 2010) (Kerns, 2007) (Hegenbarth, 2008)";
         
         string stringChildCaCl = string("")  + a + b +
@@ -129,8 +129,7 @@ namespace libAntidote {
 
     
     string CaChloride::getRef() {
-        return string("References for Calcium Chloride Algorithm\n\n") +
-        "Buckley N, D. A. (1993). Slow-release verapamil poisoning. Use of polyethylene glycol  "  +
+        return string("Buckley N, D. A. (1993). Slow-release verapamil poisoning. Use of polyethylene glycol  ")  +
         "whole-bowel lavage and high-dose calcium. Med J Aust. , 158 (2), 202-204.\n\n"  +
         "Haddad, L. (1996). Resuscitation after nifedipine overdose exclusively with intravenous  "  +
         "calcium chloride. Am J Emerg Med , 14 (6), 602-3\n\n"  +

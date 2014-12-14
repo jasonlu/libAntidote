@@ -19,31 +19,31 @@ namespace libAntidote {
         c = "";//getRef();
         
         string praWarning = a+b+
-        "Pralidoxime is not to be used alone in organophosphate poisoning. \n" +
+        "Pralidoxime is not to be used alone in organophosphate poisoning. " +
         "Response to atropine should be determined first.";
         insertToMap("praWarning", praWarning);
         
         string praAdultIV = a+b+
-        "Inject an initial dose of 1000 to 2000 mg of pralidoxime, IVPB in \n" +
-        "100 mL of NS, over 15-30 min. If this is not practical or if pulmonary \n" +
-        "edema is present, the dose should be given slow IVP (over five minutes or \n" +
-        "more),as a 50 mg/mL solution in water (e.g., 1000 mg in 20 mL). A second dose\n" +
+        "Inject an initial dose of 1000 to 2000 mg of pralidoxime, IVPB in " +
+        "100 mL of NS, over 15-30 min. If this is not practical or if pulmonary " +
+        "edema is present, the dose should be given slow IVP (over five minutes or " +
+        "more),as a 50 mg/mL solution in water (e.g., 1000 mg in 20 mL). A second dose " +
         "of 1000 to 2000 mg may be given in about one hour if muscle weakness persists.\n" +
         "Additional doses may be given every 10-12 hours if muscle weakness persists."+c;
         insertToMap("praAdultIV", praAdultIV);
         
         string praAdultIM = a+b+
-        "Give 600mg pralidoxime in 2ml IM Q15min PRN (3doses max).If symptoms are \n" +
+        "Give 600mg pralidoxime in 2ml IM Q15min PRN (3doses max).If symptoms are " +
         "severe give the 3 doses in rapid succession."+c;
         insertToMap("praAdultIM", praAdultIM);
         
         string praChildIV = a+b+
-        "Administer "+praCalIV()+"mg (20-50 mg/kg) pralidoxime IV (max  2000 mg/dose) over 15-30 minutes. \n" +
-        "May give second dose of "+praCalIV()+"mg (20-50 mg/kg) after about one hour if muscle weakness \n" +
+        "Administer "+praCalIV()+"mg (20-50 mg/kg) pralidoxime IV (max  2000 mg/dose) over 15-30 minutes. " +
+        "May give second dose of "+praCalIV()+"mg (20-50 mg/kg) after about one hour if muscle weakness " +
         "persists. Repeat dosing every 10-12 hours as needed.\n" +
-        "If IVPB or IVCI is not practical, or if pulmonary edema is present,  give \n" +
-        praCalIV()+"mg (20-50 mg/kg) dose slow IVP  (over not less than five minutes) as a 50 mg/mL \n" +
-        "solution.. Additional doses may be given every 10-12 hours if muscle weakness \n" +
+        "If IVPB or IVCI is not practical, or if pulmonary edema is present,  give " +
+        praCalIV()+"mg (20-50 mg/kg) dose slow IVP  (over not less than five minutes) as a 50 mg/mL " +
+        "solution.. Additional doses may be given every 10-12 hours if muscle weakness " +
         "persists."+c;
         insertToMap("praChildIV", praChildIV);
         
@@ -87,9 +87,8 @@ namespace libAntidote {
     }
     
     string Pralidoxime::getRef() {
-        return string("\n\nPralidoxime Antidote Algorithm: \n\n") +
-                      "Baxter Healthcare Corporation.(2010, December1). PROTOPAM CHLORIDE- \n" +
-                      "pralidoxime chloride injection, powder, lyophilized, for solution. \n," +
+        return string("Baxter Healthcare Corporation.(2010, December1). PROTOPAM CHLORIDE- ") +
+                      "pralidoxime chloride injection, powder, lyophilized, for solution. ," +
                       "Package Insert . Deerfield, IL, U.S.: Baxter Healthcare Corporation .";
     }
 }

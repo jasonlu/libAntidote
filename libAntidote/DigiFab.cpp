@@ -14,29 +14,29 @@ namespace libAntidote {
     DigiFab::DigiFab(double age, double height, double weight) : Antidote(age, height, weight) {
         
         string a = "Digoxin Immune FAB (digoxin toxicity)Antidote Algorithm \n",
-        b = "For the treatement of acute iron toxicity.\n\n",
+        b = string("For the treatment of acute and chronic digoxin toxicity.  ") + FDA + "\n\n",
         c = "\n (BTG International Inc. , 2012)";
         
         string childChronUnk = a + b +
-        "Administer 1 vial of DigiFab� IV in infants and children < 20 Kg. Failure to " +
+        "Administer 1 vial of DigiFab(R) IV in infants and children < 20 Kg. Failure to " +
         "respond to this therapy may indicate to physician that digoxin toxicity may " +
         "not be the cause of patient presentation." + c;
         insertToMap("childChronUnk", childChronUnk);
         
         string adultChronUnk = a + b +
-        "Administer 6 vials of DigiFab� IV in adults and children � 20 Kg. Failure to " +
+        "Administer 6 vials of DigiFab(R) IV in adults and children >= 20 Kg. Failure to " +
         "respond to this therapy may indicate to physician that digoxin toxicity may " +
         "not be the cause of patient presentation." + c;
         insertToMap("adultChronUnk", adultChronUnk);
         
         string adultAcuteUnk = a + b +
-        "Administer 20 vials of DigiFab�.  Start with 10 vials followed by an additional 10 vials, " +
+        "Administer 20 vials of DigiFab(R).  Start with 10 vials followed by an additional 10 vials, " +
         "if needed, to avoid a febrile reaction.  Failure to respond to this therapy may indicate " +
-        "to physician 	that digoxin toxicity may not be the cause of patient presentation." + c;
+        "to physician that digoxin toxicity may not be the cause of patient presentation." + c;
         insertToMap("adultAcuteUnk", adultAcuteUnk);
         
         string childAcuteUnk = a + b +
-        "Administer 20 vials of DigiFab�. Monitor for volume overload in small(< 20 Kg) " +
+        "Administer 20 vials of DigiFab(R). Monitor for volume overload in small(< 20 Kg) " +
         "children. Start with 10 vials followed by an additional 10 vials, if needed, " +
         "to avoid a febrile reaction.Failure to respond to this therapy may indicate to physician " +
         "that digoxin toxicity may not be the cause of patient presentation." + c;
@@ -65,9 +65,6 @@ namespace libAntidote {
         Question *inputSerumDigoxinLevels = new Question("Enter serum digoxin levels in ng/ml.");
         inputSerumDigoxinLevels->setType("numbers");
         insertToMap("inputSerumDigoxinLevels", inputSerumDigoxinLevels);
-
-        
-        
     }
     
     DigiFab::~DigiFab() {
@@ -76,7 +73,7 @@ namespace libAntidote {
     
     Question* DigiFab::getNextQuestion(){
         string a = "Digoxin Immune FAB (digoxin toxicity)Antidote Algorithm \n",
-        b = "For the treatement of acute iron toxicity.\n\n",
+        b = string("For the treatment of acute and chronic digoxin toxicity.  ") + FDA + "\n\n",
         c = "\n (BTG International Inc. , 2012)";
 
         int n1 = prompts["n1"]->getAnswerInt();
@@ -128,7 +125,7 @@ namespace libAntidote {
     
     string DigiFab::getRef() {
         return string("References for Digoxamine Immune FAB Algorithm\n\n") +
-                      "BTG International Inc. . (2012, January 1). DIGIFAB� DIGOXIN " +
+                      "BTG International Inc. . (2012, January 1). DIGIFAB(R) DIGOXIN " +
                       "IMMUNE FAB (OVINE) . Package Insert . West Conshohocken , PA, \n" +
                       "U.S.: BTG International Inc.";
     }
