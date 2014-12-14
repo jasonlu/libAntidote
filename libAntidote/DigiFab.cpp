@@ -58,12 +58,12 @@ namespace libAntidote {
         insertToMap("nc", nc);
         
         Question *inputDose = new Question("Enter dose in milligrams.");
-        inputDose->setType("numbers");
+        inputDose->setType("numbers", "milligrams");
         insertToMap("inputDose", inputDose);
         
 
         Question *inputSerumDigoxinLevels = new Question("Enter serum digoxin levels in ng/ml.");
-        inputSerumDigoxinLevels->setType("numbers");
+        inputSerumDigoxinLevels->setType("numbers", "ng/ml");
         insertToMap("inputSerumDigoxinLevels", inputSerumDigoxinLevels);
     }
     

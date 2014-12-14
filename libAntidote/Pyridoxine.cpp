@@ -30,7 +30,7 @@ namespace libAntidote {
         insertToMap("adultUnknown", adultUnknown);
         
         string hydrazines = ""+a+b+
-        "Administer "+toStr(weightkg*25)+" mg IV (25mg/kg in children and adults ) " +
+        "Administer "+toStr(weightkg*25)+" mg IV (25mg/kg in children and adults) " +
         "over 15-30min.  May repeat dose as necessary to control seizures (max 15g/day) "+c;
         insertToMap("hydrazines", hydrazines);
         
@@ -55,32 +55,31 @@ namespace libAntidote {
     Question* Pyridoxine::getNextQuestion(){
         int n1 = prompts["isoHyd"]->getAnswerInt();
         if (n1==0){
+            int na = prompts["isDoseKnown"]->getAnswerInt();
             
-            if(weightkg>71 || age>18){
-                int na = prompts["isDoseKnown"]->getAnswerInt();
-                if(na==0){
-                    double dose = prompts["enterDose"]->getAnswerFloat();
+            if(na==0){
+                double dose = prompts["enterDose"]->getAnswerFloat();
+                if(dose == -1) {
+                    return prompts["enterDose"];
+                } else {
                     moreQuestions = false;
-                    return new Question(a+b+pyrAdultKnown(dose)+c);
-                } else if(na==1){
-                    moreQuestions = false;
+                    if(weightkg>71 || age>18){
+                        return new Question(a+b+pyrAdultKnown(dose)+c);
+                    } else {
+                        return new Question(a+b+pyrChildKnown(dose)+c);
+                    }
+                }
+            } else if(na==1){
+                moreQuestions = false;
+                if(weightkg>71 || age>18){
                     return prompts["adultUnknown"];
                 } else {
-                    return prompts["isDoseKnown"];
+                    return prompts["childUnknown"];
                 }
             } else {
-                int na = prompts["isDoseKnown"]->getAnswerInt();
-                if(na==0){
-                    double dose = prompts["enterDose"]->getAnswerFloat();
-                    moreQuestions = false;
-                    return new Question(a+b+pyrChildKnown(dose)+c);
-                } else if(na==1){
-                    moreQuestions = false;
-                    return prompts["childUnknown"];
-                } else {
-                    return prompts["isDoseKnown"];
-                }
+                return prompts["isDoseKnown"];
             }
+            
         } else if (n1 == 1){
             moreQuestions = false;
             return prompts["hydrazines"];

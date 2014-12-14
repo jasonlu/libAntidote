@@ -64,7 +64,7 @@ namespace libAntidote {
         insertToMap("strSymptomatic", strSymptomatic);
         
         Question *enterBloodLevels = new Question("Please enter patients blood Pb (lead) levels in mcg/dL ");
-        enterBloodLevels->setType("numbers");
+        enterBloodLevels->setType("numbers", "mcg/dL");
         insertToMap("enterBloodLevels", enterBloodLevels);
         
     }

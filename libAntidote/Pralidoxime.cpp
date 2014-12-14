@@ -18,9 +18,12 @@ namespace libAntidote {
         b = string("For the secondary treatment of organophosphate pesticide toxicity.  ")+FDA+"\n\n",
         c = "";//getRef();
         
-        string praWarning = a+b+
-        "Pralidoxime is not to be used alone in organophosphate poisoning. " +
+        string strPraWarning = a+b+
+        "Pralidoxime is not to be used alone in organophosphate poisoning. \n" +
         "Response to atropine should be determined first.";
+        
+        Question *praWarning = new Question(strPraWarning);
+        praWarning->setType("warning");
         insertToMap("praWarning", praWarning);
         
         string praAdultIV = a+b+
