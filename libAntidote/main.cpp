@@ -19,6 +19,7 @@
 #include "EdtaDimercaprol.h"
 #include "Pralidoxime.h"
 #include "Pyridoxine.h"
+#include "Physostigmine.h"
 
 using namespace std;
 using namespace libAntidote;
@@ -28,7 +29,7 @@ void showDialog(Question *q);
 int main() {
     cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
     Antidote *dote;
-    dote = new Pyridoxine(20, 80, 180);
+    dote = new Physostigmine(20, 80, 180);
     //dote = new CyanideToxicity(30, 80, 180);
     while(dote->hasMoreQuestions()) {
         Question *q = dote->getNextQuestion();

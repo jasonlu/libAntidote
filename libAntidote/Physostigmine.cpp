@@ -16,23 +16,19 @@ namespace libAntidote {
         a = "Physostigmine Antidote Algorithm \n",
         b = string("As a secondary treatment of anticholinergic syndrome.  ") + FDA + "\n\n",
         c = "";//getRef();
-        
-    }
-    
-    Physostigmine::~Physostigmine() {
         Question *physWarning = new Question(a+b+
-        "Warning: Physostigmine Salicylate Injection should not be used in the " +
-        "presence of asthma, gangrene, diabetes, cardiovascular disease, mechanical " +
-        "obstruction of the intestine or urogenital tract or any vagotonic state, " +
-        "and in patients receiving choline esters and depolarizing neuromuscular " +
-        "blocking agents (decamethonium, succinylcholine).Patient must have normal " +
-        "QRS on ECG to receive physostigmine.");
+                                             "Warning: Physostigmine Salicylate Injection should not be used in the " +
+                                             "presence of asthma, gangrene, diabetes, cardiovascular disease, mechanical " +
+                                             "obstruction of the intestine or urogenital tract or any vagotonic state, " +
+                                             "and in patients receiving choline esters and depolarizing neuromuscular " +
+                                             "blocking agents (decamethonium, succinylcholine).Patient must have normal " +
+                                             "QRS on ECG to receive physostigmine.");
         physWarning->setType("warning");
         insertToMap("physWarning", physWarning);
         
         Question *physChildWarning = new Question(a+b+
-        "Administration of physostigmine in children should reserved for " +
-        "life-threatening conditions.");
+                                                  "Administration of physostigmine in children should reserved for " +
+                                                  "life-threatening conditions.");
         physChildWarning->setType("warning");
         insertToMap("physChildWarning", physChildWarning);
         
@@ -49,6 +45,11 @@ namespace libAntidote {
         "adverse events.  Recommended dosage 0.5-2mg IV,IM.  May repeat every 10-30 " +
         "minutes until desired response."+c;
         insertToMap("physAdult", physAdult);
+
+        
+    }
+    
+    Physostigmine::~Physostigmine() {
         
         
     }
