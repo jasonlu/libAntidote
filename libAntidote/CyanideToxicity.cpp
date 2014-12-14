@@ -67,7 +67,7 @@ namespace libAntidote {
         "recur, one half of each dose of sodium nitrite and sodium thiosulfate may be repeated after  " +
         "30 minutes.(ABO Pharmaceuticals, 2013)";
         
-        string strAgeGreaterthanTwentyOne = string("For the treatment of known or suspected cyanide toxicity or poisoning:\n\n")+
+        string strAgeGreaterthanTwentyOne = string("For the treatment of known or suspected cyanide toxicity or poisoning.  ") + FDA + "\n\n"+
         "First Line Therapy - hydroxocobalamin " +
         "Intravenous infusion dosage of hydroxocobalamin: " +
         "Adults: Initially, 5 g IV infused over 15 minutes (approximately 15 ml/minute). " +
